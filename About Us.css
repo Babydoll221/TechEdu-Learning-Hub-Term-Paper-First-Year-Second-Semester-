@@ -1,0 +1,578 @@
+/* about.css - Additional styles for About Us page */
+
+/* Page Hero */
+.page-hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--light-text);
+    padding: 4rem 5%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.about-hero h1 span {
+    color: #f1c40f;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+/* Our Story Section */
+.our-story {
+    padding: 4rem 0;
+    background-color: var(--light-text);
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.story-content .lead {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.story-content p {
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1.2;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.story-image {
+    text-align: center;
+}
+
+.rounded-image {
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
+}
+
+.image-caption {
+    margin-top: 1rem;
+    font-style: italic;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Mission Cards */
+.mission-vision {
+    padding: 4rem 0;
+    background-color: var(--light-bg);
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.card {
+    background-color: var(--light-text);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.card-list {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.card-list li {
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.mission-card {
+    border-top: 4px solid #3498db;
+}
+
+.vision-card {
+    border-top: 4px solid #9b59b6;
+}
+
+.values-card {
+    border-top: 4px solid #e67e22;
+}
+
+/* Team Section */
+.meet-team {
+    padding: 4rem 0;
+    background-color: var(--light-text);
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.team-card {
+    background-color: var(--light-bg);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    text-align: center;
+    transition: var(--transition);
+    border: 1px solid #e0e0e0;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow);
+    border-color: var(--primary-color);
+}
+
+.member-photo {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--primary-color);
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-card h3 {
+    margin-bottom: 0.3rem;
+    color: var(--secondary-color);
+}
+
+.member-role {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.member-bio {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.member-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.skill-tag {
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.member-social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.member-social a {
+    text-decoration: none;
+    color: #666;
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+
+.member-social a:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+/* Comparison Table */
+.why-choose {
+    padding: 4rem 0;
+    background-color: var(--light-bg);
+}
+
+.comparison-container {
+    overflow-x: auto;
+    margin-top: 2rem;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--light-text);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.comparison-table caption {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    text-align: left;
+}
+
+.comparison-table th {
+    background-color: var(--secondary-color);
+    color: var(--light-text);
+    padding: 1rem;
+    text-align: left;
+}
+
+.comparison-table td {
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+}
+
+.comparison-table tr:last-child td {
+    border-bottom: none;
+}
+
+.comparison-table tr:hover td {
+    background-color: #f9f9f9;
+}
+
+.positive {
+    color: #27ae60;
+    font-weight: 600;
+}
+
+.negative {
+    color: #e74c3c;
+    font-weight: 600;
+}
+
+.neutral {
+    color: #f39c12;
+    font-weight: 600;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 4rem 0;
+    background-color: var(--light-text);
+}
+
+.testimonial-slider {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.testimonial-track {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card {
+    flex: 0 0 100%;
+    padding: 2rem;
+    background-color: var(--light-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    opacity: 0.3;
+    transition: var(--transition);
+}
+
+.testimonial-card.active {
+    opacity: 1;
+}
+
+.testimonial-content {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.testimonial-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+    font-style: italic;
+}
+
+.testimonial-content::before {
+    content: '"';
+    font-size: 4rem;
+    color: var(--primary-color);
+    opacity: 0.2;
+    position: absolute;
+    top: -20px;
+    left: -10px;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.author-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+}
+
+.author-info h4 {
+    margin-bottom: 0.2rem;
+    color: var(--secondary-color);
+}
+
+.author-info p {
+    color: #666;
+    font-size: 0.85rem;
+}
+
+.slider-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.slider-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+
+.slider-btn:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+.slider-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.slider-dots {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.dot.active {
+    background-color: var(--primary-color);
+    width: 20px;
+    border-radius: 10px;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, var(--secondary-color), var(--dark-text));
+    color: var(--light-text);
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.cta-section h2 {
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.cta-buttons .btn-secondary {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.cta-buttons .btn-secondary:hover {
+    background-color: white;
+    color: var(--secondary-color);
+}
+
+/* Footer additions */
+.footer-email {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    color: var(--light-text);
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.social-links a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.footer-note {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    margin-top: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .story-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .story-image {
+        order: -1;
+    }
+    
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .comparison-table {
+        font-size: 0.85rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-card {
+        padding: 1rem;
+    }
+    
+    .member-photo {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .comparison-table th,
+    .comparison-table td {
+        padding: 0.5rem;
+    }
+}
+
+/* Animation for stats */
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.stat-number {
+    animation: countUp 1s ease-out;
+}

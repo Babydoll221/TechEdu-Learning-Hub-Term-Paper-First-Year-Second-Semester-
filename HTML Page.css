@@ -1,0 +1,641 @@
+/* tutorials.css - Styles for HTML Tutorials page */
+
+/* Tutorial Hero */
+.tutorial-hero {
+    background: linear-gradient(135deg, #e44d26, #f16529);
+    color: white;
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.tutorial-hero h1 span {
+    color: #ffd700;
+    font-weight: 700;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+    font-size: 1.1rem;
+}
+
+.hero-stats span {
+    background: rgba(255,255,255,0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+}
+
+/* Tutorial Container - Sidebar + Content */
+.tutorial-container {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    background: white;
+}
+
+/* Sidebar */
+.tutorial-sidebar {
+    width: 280px;
+    background: #f8f9fa;
+    padding: 2rem 1rem;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    border-right: 1px solid #e0e0e0;
+    flex-shrink: 0;
+}
+
+.tutorial-sidebar h3 {
+    color: var(--secondary-color);
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.toc-list {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.toc-list li {
+    margin-bottom: 0.5rem;
+}
+
+.toc-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #555;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: var(--transition);
+    font-size: 0.95rem;
+}
+
+.toc-link:hover {
+    background-color: #e9ecef;
+    color: var(--primary-color);
+}
+
+.toc-link.active {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+}
+
+/* Progress Tracker */
+.progress-tracker {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-top: 2rem;
+}
+
+.progress-tracker h4 {
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.progress-bar {
+    height: 20px;
+    background: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color), #5faee3);
+    color: white;
+    font-size: 0.75rem;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+.progress-text {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.btn-reset {
+    width: 100%;
+    padding: 0.5rem;
+    background: transparent;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #666;
+    transition: var(--transition);
+}
+
+.btn-reset:hover {
+    background: #f0f0f0;
+    color: var(--accent-color);
+}
+
+/* Main Tutorial Content */
+.tutorial-content {
+    flex: 1;
+    padding: 2rem 3rem;
+    max-width: calc(100% - 280px);
+}
+
+/* Tutorial Sections */
+.tutorial-section {
+    margin-bottom: 4rem;
+    scroll-margin-top: 2rem;
+}
+
+.tutorial-section h2 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+.section-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+}
+
+.reading-time {
+    background: #e9ecef;
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+    color: #555;
+}
+
+.difficulty {
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+}
+
+.difficulty.beginner {
+    background: #d4edda;
+    color: #155724;
+}
+
+/* Concept Boxes */
+.concept-box {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--box-shadow);
+}
+
+.concept-box h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.concept-box h4 {
+    color: var(--secondary-color);
+    margin: 1.5rem 0 1rem;
+}
+
+.highlight {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 0 4px 4px 0;
+}
+
+/* Code Blocks */
+.code-block {
+    background: #1e1e1e;
+    color: #d4d4d4;
+    border-radius: 6px;
+    margin: 1.5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.code-block pre {
+    padding: 1.5rem;
+    overflow-x: auto;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.code-block code {
+    background: transparent;
+    color: #d4d4d4;
+    padding: 0;
+}
+
+.copy-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    border: none;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: var(--transition);
+}
+
+.copy-btn:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* Live Demos */
+.live-demo {
+    background: #f8f9fa;
+    border: 1px dashed var(--primary-color);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    margin: 1.5rem 0;
+}
+
+.demo-output {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+}
+
+/* Try It Yourself Editor */
+.try-it-yourself {
+    background: #f8f9fa;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.code-editor {
+    margin: 1.5rem 0;
+}
+
+.html-editor {
+    width: 100%;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.9rem;
+    padding: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 4px;
+    background: #1e1e1e;
+    color: #d4d4d4;
+    resize: vertical;
+}
+
+.html-editor:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.btn-run {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 1rem 0;
+    transition: var(--transition);
+}
+
+.btn-run:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.editor-output {
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 1.5rem;
+    min-height: 100px;
+}
+
+/* Tables */
+.concept-table, .formatting-table, .error-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
+
+.concept-table th, .formatting-table th, .error-table th {
+    background: var(--secondary-color);
+    color: white;
+    padding: 0.8rem;
+    text-align: left;
+}
+
+.concept-table td, .formatting-table td, .error-table td {
+    padding: 0.8rem;
+    border: 1px solid #e0e0e0;
+}
+
+.concept-table tr:nth-child(even), .formatting-table tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+/* Definition Lists */
+.definition-list {
+    margin: 1.5rem 0;
+}
+
+.definition-list dt {
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-top: 1rem;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.definition-list dd {
+    margin-left: 1.5rem;
+    color: #555;
+}
+
+/* Quiz Options */
+.section-checkpoint {
+    background: #e8f4fd;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.quiz-option {
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 1rem;
+    margin: 1rem 0;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.quiz-option:hover {
+    border-color: var(--primary-color);
+    transform: translateX(5px);
+}
+
+.quiz-option.correct {
+    background: #d4edda;
+    border-color: #28a745;
+}
+
+.quiz-option.incorrect {
+    background: #f8d7da;
+    border-color: #dc3545;
+}
+
+.quiz-feedback {
+    margin-top: 1rem;
+    font-weight: 600;
+    min-height: 2rem;
+}
+
+/* Note Box */
+.note {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0 4px 4px 0;
+}
+
+/* Exercise Cards */
+.exercise-card {
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: var(--transition);
+}
+
+.exercise-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: var(--box-shadow);
+}
+
+.exercise-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.exercise-card summary {
+    cursor: pointer;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin: 1rem 0;
+}
+
+.btn-check-answer {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-top: 1rem;
+}
+
+.btn-check-answer:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Section Navigation */
+.section-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 2px solid #e0e0e0;
+}
+
+.nav-prev, .nav-next {
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.nav-prev {
+    background: #e0e0e0;
+    color: #666;
+}
+
+.nav-next {
+    background: var(--primary-color);
+    color: white;
+}
+
+.nav-prev:hover:not(:disabled) {
+    background: #d0d0d0;
+}
+
+.nav-next:hover {
+    background: var(--secondary-color);
+    transform: translateX(5px);
+}
+
+.nav-prev:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Demo Form */
+.demo-form {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    margin: 1.5rem 0;
+}
+
+.demo-form fieldset {
+    border: 2px solid #e0e0e0;
+    padding: 1.5rem;
+    border-radius: 4px;
+}
+
+.demo-form legend {
+    font-weight: 700;
+    color: var(--secondary-color);
+    padding: 0 0.5rem;
+}
+
+.form-row {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.form-row label {
+    min-width: 100px;
+    font-weight: 600;
+}
+
+.form-row input[type="text"],
+.form-row input[type="email"],
+.form-row select {
+    flex: 1;
+    padding: 0.5rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 4px;
+}
+
+.radio-group {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.btn-submit {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .tutorial-container {
+        flex-direction: column;
+    }
+    
+    .tutorial-sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .tutorial-content {
+        max-width: 100%;
+        padding: 2rem;
+    }
+    
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-stats {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .form-row label {
+        min-width: auto;
+    }
+    
+    .form-row input[type="text"],
+    .form-row input[type="email"],
+    .form-row select {
+        width: 100%;
+    }
+    
+    .comparison-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-navigation {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tutorial-content {
+        padding: 1rem;
+    }
+    
+    .concept-box {
+        padding: 1rem;
+    }
+    
+    .code-block pre {
+        font-size: 0.8rem;
+        padding: 1rem;
+    }
+    
+    .concept-table, .formatting-table {
+        font-size: 0.85rem;
+    }
+    
+    .concept-table th, .concept-table td {
+        padding: 0.5rem;
+    }
+}

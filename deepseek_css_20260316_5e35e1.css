@@ -1,0 +1,16 @@
+/* Mobile devices (Lecture 1.2, p. 4) */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+}

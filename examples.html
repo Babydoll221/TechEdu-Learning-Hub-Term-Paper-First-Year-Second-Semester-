@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Live code examples gallery for HTML, CSS, and JavaScript. See real-world examples with interactive previews and copyable code.">
+    <meta name="keywords" content="code examples, HTML examples, CSS examples, JavaScript examples, web development demos">
+    <meta name="author" content="TechEdu Team">
+    <title>Code Examples | TechEdu Learning Hub</title>
+    <link rel="stylesheet" href="TechEdu Learning Hub.css">
+    <link rel="stylesheet" href="Examples.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="TechEdu Learning Hub Logo.png" alt="TechEdu Logo - Stylized graduation cap and code brackets" width="60" height="60">
+            <h1>TechEdu <span>Learning Hub</span></h1>
+        </div>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="TechEdu Learning Hub.html">Home</a></li>
+                <li><a href="About Us.html">About</a></li>
+                <li><a href="HTML Page.html">HTML</a></li>
+                <li><a href="CSS Page.html">CSS</a></li>
+                <li><a href="Javascript.html">JavaScript</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page Hero Section -->
+        <section class="examples-hero">
+            <div class="hero-content">
+                <h1>Code <span>Examples</span></h1>
+                <p>Explore live, interactive examples of HTML, CSS, and JavaScript. See code in action and learn by doing.</p>
+                <div class="hero-search">
+                    <input type="text" id="exampleSearch" placeholder="🔍 Search examples...">
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="html">HTML</button>
+                        <button class="filter-btn" data-filter="css">CSS</button>
+                        <button class="filter-btn" data-filter="javascript">JavaScript</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Examples Stats -->
+        <section class="examples-stats">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" id="totalExamples">0</div>
+                    <div class="stat-label">Total Examples</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="htmlExamples">0</div>
+                    <div class="stat-label">HTML Examples</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="cssExamples">0</div>
+                    <div class="stat-label">CSS Examples</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="jsExamples">0</div>
+                    <div class="stat-label">JavaScript Examples</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HTML Examples Section -->
+        <section id="html-examples" class="example-section" data-category="html">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="html-icon">🌐</span> HTML Examples
+                </h2>
+                <p class="section-description">Structured markup examples - tables, forms, lists, and semantic HTML</p>
+            </div>
+
+            <div class="examples-grid">
+                <!-- Example 1: Basic HTML Structure -->
+                <div class="example-card" data-category="html">
+                    <div class="example-header">
+                        <h3>Basic HTML Structure</h3>
+                        <span class="example-tag html">HTML</span>
+                    </div>
+                    <div class="example-preview">
+                        <div class="preview-badge">Preview</div>
+                        <div class="html-preview" id="preview-structure">
+                            <div style="border:2px solid #3498db; padding:10px;">
+                                <h4 style="margin:0 0 10px 0; color:#2c3e50;">My First Page</h4>
+                                <p style="margin:0;">This is a paragraph inside a div.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="example-code">
+                        <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;My First Page&lt;/h1&gt;
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                        <button class="copy-code-btn" onclick="copyCode(this)">📋 Copy</button>
+                    </div>
+                    <div class="example-actions">
+                        <button class="btn-preview" onclick="showFullPreview('structure')">Full Preview</button>
+                        <button class="btn-edit" onclick="editExample('structure')">✏️ Edit</button>
+                    </div>
+                </div>
+
+                <!-- Example 2: HTML Table with Colspan/Rowspan -->
+                <div class="example-card" data-category="html">
+                    <div class="example-header">
+                        <h3>Complex Table</h3>
+                        <span class="example-tag html">HTML</span>
+                    </div>
+                    <div class="example-preview">
+                        <div class="preview-badge">Preview</div>
+                        <div class="html-preview">
+                            <table style="border-collapse:collapse; width:100%; border:1px solid #ddd;">
+                                <tr>
+                                    <th style="border:1px solid #ddd; padding:8px; background:#3498db; color:white;" colspan="2">Student Info</th>
+                                    <th style="border:1px solid #ddd; padding:8px; background:#3498db; color:white;">Grade</th>
+                                </tr>
+                                <tr>
+                                    <td style="border:1px solid #ddd; padding:8px;" rowspan="2">John</td>
+                                    <td style="border:1px solid #ddd; padding:8px;">Math</td>
+                                    <td style="border:1px solid #ddd; padding:8px;">A-</td>
+                                </tr>
+                                <tr>
+                                    <td style="border:1px solid #ddd; padding:8px;">Science</td>
+                                    <td style="border:1px solid #ddd; padding:8px;">B+</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="example-code">
+                        <pre><code class="language-html">&lt;table border="1"&gt;
+    &lt;tr&gt;
+        &lt;th colspan="2"&gt;Student Info&lt;/th&gt;
+        &lt;th&gt;Grade&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td rowspan="2"&gt;John&lt;/td&gt;
+        &lt;td&gt;Math&lt;/td&gt;
+        &lt;td&gt;A-&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Science&lt;/td&gt;
+        &lt;td&gt;B+&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                        <button class="copy-code-btn" onclick="copyCode(this)">📋 Copy</button>
+                    </div>
+                </div>
+
+                <!-- Example 3: HTML5 Form -->
+                <div class="example-card" data-category="html">
+                    <div class="example-header">
+                        <h3>Registration Form</h3>
+                        <span class="example-tag html">HTML</span>
+                    </div>
+                    <div class="example-preview">
+                        <div class="preview-badge">Preview</div>
+                        <div class="html-preview">
+                            <form style="display:flex; flex-direction:column; gap:10px;">
+                                <input type="text" placeholder="Full Name" style="padding:8px; border:2px solid #ddd;">
+                                <input type="email" placeholder="Email" style="padding:8px; border:2px solid #ddd;">
+                                <select style="padding:8px; border:2px solid #ddd;">
+                                    <option>HTML</option>
+                                    <option>CSS</option>
+                                    <option>JavaScript</option>
+                                </select>
+                                <button style="background:#3498db; color:white; padding:10px; border:none; cursor:pointer;">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="example-code">
+                        <pre><code class="language-html">&lt;form&gt;
+    &lt;input type="text" placeholder="Full Name"&gt;
+    &lt;input type="email" placeholder="Email"&gt;
+    &lt;select&gt;
+        &lt;option&gt;HTML&lt;/option&gt;
+        &lt;option&gt;CSS&lt;/option&gt;
+        &lt;option&gt;JavaScript&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                        <button class="copy-code-btn" onclick="copyCode(this)">📋 Copy</button>
+                    </div>
+                </div>
+
+                <!-- Example 4: Semantic HTML -->
+                <div class="example-card" data-category="html">
+                    <div class="example-header">
+                        <h3>Semantic Layout</h3>
+                        <span class="example-tag html">HTML</span>
+                    </div>
+                    <div class="example-preview">
+                        <div class="preview-badge">Preview</div>
+                        <div class="html-preview">
+                            <header style="background:#3498db; color:white; padding:10px; text-align:center;">Header</header>
+                            <nav style="background:#2c3e50; color:white; padding:10px; text-align:center;">Navigation</nav>
+                            <div style="display:flex;">
+                                <main style="flex:2; background:#f8f9fa; padding:10px;">Main Content</main>
+                                <aside style="flex:1; background:#e9ecef; padding:10px;">Sidebar</aside>
+                            </div>
+                            <footer style="background:#2c3e50; color:white; padding:10px; text-align:center;">Footer</footer>
+                        </div>
+                    </div>
+                    <div class="example-code">
+                        <pre><code class="language-html">&lt;header&gt;Header&lt;/header&gt;
+&lt;nav&gt;Navigation&lt;/nav&gt;
+&lt;main&gt;Main Content&lt;/main&gt;
+&lt;aside&gt;Sidebar&lt;/aside&gt;
+&lt;footer&gt;Footer&lt;/footer&gt;</code></pre>
+                        <button class="copy-code-btn" onclick="copyCode(this)">📋 Copy</button>
+                    </div>
+                </div>
+
+                <!-- Example 5: Nested Lists -->
+                <div class="example-card" data-category="html">
+                    <div class="example-header">
+                        <h3>Nested Lists</h3>
+                        <span class="example-tag html">HTML</span>
+                    </div>
+                    <div class="example-preview">
+                        <div class="preview-badge">Preview</div>
+                        <div class="html-preview">
+                            <ul>
+                                <li>Fruits
+                                    <ul>
+                                        <li>Apples</li>
+                                        <li>Bananas</li>
+                                    </ul>
+                                </li>
+                                <li>Vegetables
+                                    <ul>
+                                        <li>Carrots</li>
+                                        <li>Broccoli</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="example-code">
+                        <pre><code class="language-html">&lt;ul&gt;
+    &lt;li&gt;Fruits
+        &lt;ul&gt;
+            &lt;li&gt;Apples&lt;/li&gt;
+            &lt;li&gt;Bananas&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Vegetables
+        &lt;ul&gt;
+            &lt;li&gt;Carrots&lt;/li&gt;
+            &lt;li&gt;Broccoli&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                        <button class="copy-code-btn" onclick="copyCode(this)">📋 Copy</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CSS Examples Section -->
+        <section id="css-examples" class="example-section" data-category="css">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="css-icon">🎨</span> CSS Examples
+                </h2>
+                <p class="section-description">Styling examples - flexbox, grid, animations, and visual effects</p>
+            </div>
+
+            <div class="examples-grid">
+                <!-- Example 6: Flexbox Layout -->
+                <div class="example-card" data-category="css">
+                    <div class="example-header">
+                        <h3>Flexbox Navigation</h3>
+                        <span class="example-tag css">CSS</span>
+                    </div>
+                    <div class="example-preview">
+                        <div class="preview-badge">Preview</div>
+                        <div class="css-preview" id="flexbox-demo">
+                            <style>
+                                .flex-nav {
+                                    display: flex;
+                                    justify-content: space-around;
+                                    background: #3498db;
+                                    padding: 15px;
+                                    border-radius: 8px;
+                                }
+                                .flex-nav a {
+                                    color: white;
+                                    text-decoration: none;
+                                    padding: 8px 15px;
+                                    transition: all 0.3s;
+                                }
+                                .flex-nav a:hover {
+                                    background: #2980b9;
+                                    border-radius: 4px;
+                                }
+                            </style>
+                            <div class="flex-nav">
+                                <a href="#">Home</a>
+                                <a href="#">About</a>
+                                <a href="#">Services</a>
+                                <a href="#">Contact</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="example-code">
+                        <pre><code class="language-css">.flex-nav {
+    display: flex;
+    justify-content: space-around;
+    background: #3498db;
+    padding: 15px;
+}
+
+.flex-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    transition: all 0.3s;
+}
+
+.flex-nav a:hover {
+    background: #2980b9;
+    border-radius: 4px;
+}</code></pre>
+                        <button class="copy-code-btn" onclick="copyCode(this)">📋 Copy</button>
+                    </div>
+                </div>
+
+                <!-- Example 7: CSS Grid -->
+                <div class="example-card" data-category="css">
+                    <div class="example-header">
+                        <h3>CSS Grid Gallery</h3>
+                        <span class="example-tag css">CSS</span>
+                    </div>
+                    <div class="example-preview">
+                        <div class="preview-badge">Preview</div>
+                        <div class="css-preview">
+                            <style>
+                                .grid-gallery {
+                                    display: grid;
+                                    grid-template-columns: repeat(3, 1fr);
+                                    gap: 10px;
+                                    padding: 10px;
+                                }
+                                .grid-item {
+                                    background: #3498db;
+                                    color: white;
+                                    padding: 20px;
+                                    text-align: center;
+                                    border-radius: 4px;
+                                }
+                            </style>
+                            <div class="grid-gallery">
+                                <div class="grid-item">1</div>
+                                <div class="grid-item">2</div>
+                                <div class="grid-item">3</div>
+                                <div class="grid-item">4</div>
+                                <div class="grid-item">5</div>
+                                <div class="grid-item">6</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="example-code">
+                        <pre><code class="language-css">.grid-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.grid-item {
+    background: #3498db;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}</code></pre>
+                        <button class="copy-code-btn" onclick="copyCode(this)">📋 Copy</button>
+                    </div>
+                </div>
+
+                <!-- Example 8: CSS Animations -->
+                <div class="example-card" data-category="css">
+                    <div class="example-header">
+                        <h3>Bouncing Ball</h3>
+                        <span class="example-tag css">CSS</span>
+                    </div>
+                    <div class="example-preview">
+                        <div class="preview-badge">Preview</div>
+                        <div class="css-preview" style="height: 100px; position: relative;">
+                            <style>
+                                @keyframes bounce {
+                                    0%, 100% { transform: translateY(0); }
+                                    50% { transform: translateY(-30px); }
+                                }
+                                .bouncing-ball {
+                                    width: 50px;
+                                    height: 50px;
+                                    background: #e74c3c;
+                                    border-radius: 50%;
+                                    margin: 0 auto;
+                                    animation: bounce 1s infinite ease-in-out;
+                                }
+                            </style>
+                            <div class="bouncing-ball"></div>
+                        </div>
+                    </div>
+                    <div class="example-code">
+                        <pre><code class="language-css">@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+}
+
+.ball {
+    width: 50px;
+    height: 50px;
+    background: #e74c3c;
+    border-radius: 50%;
+    animation: bounce 1s infinite;
+}</code></pre>
+                        <button class="copy-code-btn" onclick="copyCode(this)">📋 Copy</button>
+                    </div>
+                </div>
+
+                <!-- Example 9: CSS Card with Effects -->
+                <div class="example-card" data-category="css">
+                    <div class="example-header">
+                        <h3>3D Card</h3>
+                        <span class="example-tag css">CSS</span>
+                    </div>
+                    <div class="example-preview">
+                        <div class="preview-badge">Preview</div>
+                        <div class="css-preview">
+                            <style>
+                                .card-3d {
+                                    width: 200px;
+                                    padding: 20px;
+                                    background: white;
+                                    border-radius: 10px;
+                                    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+                                    transition: all 0.3s;
+                                    text-align: center;
+                                    margin: 0 auto;
+                                }
+                                .card-3d:hover {
+                                    transform: translateY(-10px) rotate(2deg);
+                                    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+                                }
+                            </style>
+                            <div class="card-3d">
+                                <h4>Hover me!</h4>
+                                <p>I'm a 3D card</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="example-code">
+                        <pre><code class="language-css">.card {
+    width: 200px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition: all 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px) rotate(2deg);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}</code></pre>
+                        <button class="copy-code-btn" onclick="copyCode(this)">📋 Copy</button>
+                    </div>
+                </div>
+
+                <!-- Example 10: CSS Gradient Button -->
+                <div class="example-card" data-category="css">
+                    <div class="example-header">
+                        <h3>Gradient Button</h3>
+                        <span class="example-tag css">CSS</span>
+                    </div>
+                    <div class="example-preview">
+                        <div class="preview-badge">Preview</div>
+                        <div class="css-preview">
+                            <style>
+                                .gradient-btn {
+                                    background: linear-gradient(135deg, #3498db, #e74c3c);
+                                    color: white;
+                                    padding: 15px 30px;
+                                    border: none;
+                                    border-radius: 50px;
+                                    font-size: 16px;
+                                    cursor: pointer;
+                                    transition: all 0.3s;
+                                }
+                                .gradient-btn:hover {
+                                    transform: scale(1.05);
+                                    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+                                }
+                            </style>
+                            <button class="gradient-btn">Click Me!</button>
+                        </div>
+                    </div>
+                    <div class="example-code">
+                        <pre><code class="language-css">.button {
+    background: linear-gradient(135deg, #3498db, #e74c3c);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}</code></pre>
+                        <button class="copy-code-btn" onclick="copyCode(this)">📋 Copy</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- JavaScript Examples Section -->
+        <section id="javascript-examples" class="example-section" data-category="javascript">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="js-icon">⚡</span> JavaScript Examples
+                </h2>
+                <p class="section-description">Interactive examples - DOM manipulation, events, and dynamic content</p>
+            </div>
+
+            <div class="examples-grid">
+                <!-- Example 11: Counter App -->
+                <div class="example-card" data-category="javascript">
+                    <div class="example-header">
+                        <h3>Interactive Counter</h3>
+                        <span class="example-tag javascript">JavaScript</span>
+                    </div>
+                    <div class="example-preview">
+                        <div class="preview-badge">Preview</div>
+                        <div class="js-preview" id="counter-preview">
+                            <div style="text-align: center;">
+                                <div style="font-size: 48px; font-weight: bold; color: #3498db;" id="counterDisplay">0</div>
+                                <div style="display: flex; gap: 10px; justify-content: center;">
+                                    <button onclick="decrementCounter()" style="background:#e74c3c; color:white; border:none; width:50px; height:50px; border-radius:50%; cursor:pointer;">-</button>
+                                    <button onclick="resetCounter()" style="background:#f39c12; color:white; border:none; width:50px; height:50px; border-radius:50%; cursor:pointer;">0</button>
+                                    <button onclick="incrementCounter()" style="background:#27ae60; color:white; border:none; width:50px; height:50px; border-radius:50%; cursor:pointer;">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="example-code">
+                        <pre><code class="language-javascript">let count = 0;
+
+function increment() {
+    count++;
+    document.getElementById('counter').textContent = count;
+}
+
+function decrement() {
+    count--;
+    document.getElementById('counter').textContent = count;
+}
+
+function reset() {
+    count = 0;
+    document.getElementById('counter').textContent = count;
+}</code></pre>
+                        <button class="copy-code-btn" onclick="copyCode(this)">📋 Copy</button>
+                    </div>
+                </div>
+
+                <!-- Example 12: Todo List -->
+                <div class="example-card" data-category="javascript">
+                    <div class="example-header">
+                        <h3>Todo List</h3>
+                        <span class="example-tag javascript">JavaScript</span>
+                    </div>
+                    <div class="example-preview">
+                        <div class="preview-badge">Preview</div>
+                        <div class="js-preview" id="todo-preview">
+                            <div style="max-width: 300px; margin: 0 auto;">
+                                <div style="display: flex; gap: 10px;">
+                                    <input type="text" id="todoInput" placeholder="Add a task" style="flex:1; padding:8px; border:2px solid #ddd;">
+                                    <button onclick="addTodo()" style="background:#3498db; color:white; border:none; padding:8px 15px;">Add</button>
+                                </div>
+                                <ul id="todoList" style="list-style:none; padding:0; margin-top:10px;">
+                                    <li style="display:flex; justify-content:space-between; padding:8px; background:#f8f9fa; margin-bottom:5px;">
+                                        Learn JavaScript <button onclick="this.parentElement.remove()" style="background:#e74c3c; color:white; border:none; width:25px;">✕</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="example-code">
+                        <pre><code class="language-javascript">function addTodo() {
+    let input = document.getElementById('todoInput');
+    let text = input.value.trim();
+    
+    if(text) {
+        let li = document.createElement('li');
+        li.innerHTML = text + ' &lt;button onclick="this.parentElement.remove()"&gt;✕&lt;/button&gt;';
+        document.getElementById('todoList').appendChild(li);
+        input.value = '';
+    }
+}</code></pre>
+                        <button class="copy-code-btn" onclick="copyCode(this)">📋 Copy</button>
+                    </div>
+                </div>
+
+                <!-- Example 13: Color Picker -->
+                <div class="example-card" data-category="javascript">
+                    <div class="example-header">
+                        <h3>Color Picker</h3>
+                        <span class="example-tag javascript">JavaScript</span>
+                    </div>
+                    <div class="example-preview">
+                        <div class="preview-badge">Preview</div>
+                        <div class="js-preview" style="text-align: center;">
+                            <input type="color" id="colorPicker" value="#3498db" style="width: 100px; height: 50px;">
+                            <div id="colorBox" style="width: 100px; height: 100px; background: #3498db; margin: 10px auto; border-radius: 8px;"></div>
+                            <p id="colorValue">#3498db</p>
+                        </div>
+                    </div>
+                    <div class="example-code">
+                        <pre><code class="language-javascript">document.getElementById('colorPicker')
+    .addEventListener('input', function(e) {
+        let color = e.target.value;
+        document.getElementById('colorBox')
+            .style.background = color;
+        document.getElementById('colorValue')
+            .textContent = color;
+    });</code></pre>
+                        <button class="copy-code-btn" onclick="copyCode(this)">📋 Copy</button>
+                    </div>
+                </div>
+
+                <!-- Example 14: Form Validation -->
+                <div class="example-card" data-category="javascript">
+                    <div class="example-header">
+                        <h3>Form Validation</h3>
+                        <span class="example-tag javascript">JavaScript</span>
+                    </div>
+                    <div class="example-preview">
+                        <div class="preview-badge">Preview</div>
+                        <div class="js-preview">
+                            <form onsubmit="return validateForm(event)" style="max-width:250px; margin:0 auto;">
+                                <input type="text" id="name" placeholder="Name" style="width:100%; padding:8px; margin-bottom:10px; border:2px solid #ddd;">
+                                <input type="email" id="email" placeholder="Email" style="width:100%; padding:8px; margin-bottom:10px; border:2px solid #ddd;">
+                                <button type="submit" style="width:100%; background:#3498db; color:white; padding:10px; border:none;">Submit</button>
+                                <p id="validationMessage" style="margin-top:10px; font-size:14px;"></p>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="example-code">
+                        <pre><code class="language-javascript">function validateForm(e) {
+    e.preventDefault();
+    let name = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+    let message = document.getElementById('validationMessage');
+    
+    if(name.length < 2) {
+        message.textContent = 'Name too short';
+        message.style.color = 'red';
+        return false;
+    }
+    
+    if(!email.includes('@')) {
+        message.textContent = 'Invalid email';
+        message.style.color = 'red';
+        return false;
+    }
+    
+    message.textContent = 'Valid!';
+    message.style.color = 'green';
+    return true;
+}</code></pre>
+                        <button class="copy-code-btn" onclick="copyCode(this)">📋 Copy</button>
+                    </div>
+                </div>
+
+                <!-- Example 15: Digital Clock -->
+                <div class="example-card" data-category="javascript">
+                    <div class="example-header">
+                        <h3>Digital Clock</h3>
+                        <span class="example-tag javascript">JavaScript</span>
+                    </div>
+                    <div class="example-preview">
+                        <div class="preview-badge">Preview</div>
+                        <div class="js-preview" style="text-align: center;" id="clock-preview">
+                            <div style="font-size: 32px; font-family: monospace; background: #2c3e50; color: #3498db; padding: 20px; border-radius: 8px;">
+                                <span id="clock">12:00:00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="example-code">
+                        <pre><code class="language-javascript">function updateClock() {
+    let now = new Date();
+    let hours = now.getHours().toString().padStart(2, '0');
+    let minutes = now.getMinutes().toString().padStart(2, '0');
+    let seconds = now.getSeconds().toString().padStart(2, '0');
+    document.getElementById('clock').textContent = 
+        hours + ':' + minutes + ':' + seconds;
+}
+
+setInterval(updateClock, 1000);
+updateClock();</code></pre>
+                        <button class="copy-code-btn" onclick="copyCode(this)">📋 Copy</button>
+                    </div>
+                </div>
+
+                <!-- Example 16: Modal Popup -->
+                <div class="example-card" data-category="javascript">
+                    <div class="example-header">
+                        <h3>Modal Popup</h3>
+                        <span class="example-tag javascript">JavaScript</span>
+                    </div>
+                    <div class="example-preview">
+                        <div class="preview-badge">Preview</div>
+                        <div class="js-preview" style="text-align: center;">
+                            <button onclick="showModal()" style="background:#3498db; color:white; padding:10px 20px; border:none; border-radius:4px;">Open Modal</button>
+                            <div id="modal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); background:white; padding:20px; border-radius:8px; box-shadow:0 20px 40px rgba(0,0,0,0.3); z-index:1000;">
+                                <h4>Modal Title</h4>
+                                <p>This is a modal popup!</p>
+                                <button onclick="hideModal()" style="background:#e74c3c; color:white; padding:5px 15px; border:none; border-radius:4px;">Close</button>
+                            </div>
+                            <div id="overlay" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.5);"></div>
+                        </div>
+                    </div>
+                    <div class="example-code">
+                        <pre><code class="language-javascript">function showModal() {
+    document.getElementById('modal').style.display = 'block';
+    document.getElementById('overlay').style.display = 'block';
+}
+
+function hideModal() {
+    document.getElementById('modal').style.display = 'none';
+    document.getElementById('overlay').style.display = 'none';
+}</code></pre>
+                        <button class="copy-code-btn" onclick="copyCode(this)">📋 Copy</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Combined Examples Section -->
+        <section id="combined-examples" class="example-section" data-category="all">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="combined-icon">🔄</span> Combined Examples
+                </h2>
+                <p class="section-description">Examples using HTML, CSS, and JavaScript together</p>
+            </div>
+
+            <div class="examples-grid">
+                <!-- Example 17: Interactive Tabs -->
+                <div class="example-card" data-category="all">
+                    <div class="example-header">
+                        <h3>Interactive Tabs</h3>
+                        <span class="example-tag combined">HTML+CSS+JS</span>
+                    </div>
+                    <div class="example-preview">
+                        <div class="preview-badge">Preview</div>
+                        <div class="combined-preview" id="tabs-preview">
+                            <style>
+                                .tab-container { max-width: 400px; margin: 0 auto; }
+                                .tab-buttons { display: flex; }
+                                .tab-btn { flex:1; padding:10px; background:#f8f9fa; border:none; cursor:pointer; }
+                                .tab-btn.active { background:#3498db; color:white; }
+                                .tab-content { display:none; padding:20px; border:1px solid #ddd; background:white; }
+                                .tab-content.active { display:block; }
+                            </style>
+                            <div class="tab-container">
+                                <div class="tab-buttons">
+                                    <button class="tab-btn active" onclick="showTab(1)">HTML</button>
+                                    <button class="tab-btn" onclick="showTab(2)">CSS</button>
+                                    <button class="tab-btn" onclick="showTab(3)">JS</button>
+                                </div>
+                                <div class="tab-content active" id="tab1">HTML content here</div>
+                                <div class="tab-content" id="tab2">CSS content here</div>
+                                <div class="tab-content" id="tab3">JavaScript content here</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="example-code">
+                        <pre><code class="language-javascript">function showTab(tabNumber) {
+    // Hide all tabs
+    document.querySelectorAll('.tab-content')
+        .forEach(tab => tab.classList.remove('active'));
+    document.querySelectorAll('.tab-btn')
+        .forEach(btn => btn.classList.remove('active'));
+    
+    // Show selected tab
+    document.getElementById('tab' + tabNumber)
+        .classList.add('active');
+    event.target.classList.add('active');
+}</code></pre>
+                        <button class="copy-code-btn" onclick="copyCode(this)">📋 Copy</button>
+                    </div>
+                </div>
+
+                <!-- Example 18: Dark Mode Toggle -->
+                <div class="example-card" data-category="all">
+                    <div class="example-header">
+                        <h3>Dark Mode Toggle</h3>
+                        <span class="example-tag combined">HTML+CSS+JS</span>
+                    </div>
+                    <div class="example-preview">
+                        <div class="preview-badge">Preview</div>
+                        <div class="combined-preview" id="darkmode-preview">
+                            <style>
+                                .dark-mode-demo {
+                                    padding: 20px;
+                                    border-radius: 8px;
+                                    transition: all 0.3s;
+                                }
+                                .dark-mode-demo.dark {
+                                    background: #2c3e50;
+                                    color: white;
+                                }
+                            </style>
+                            <div class="dark-mode-demo" id="darkModeDemo">
+                                <p>Toggle dark mode!</p>
+                                <button onclick="toggleDarkMode()" style="background:#3498db; color:white; border:none; padding:8px 15px;">Toggle Dark Mode</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="example-code">
+                        <pre><code class="language-javascript">function toggleDarkMode() {
+    document.getElementById('darkModeDemo')
+        .classList.toggle('dark');
+}</code></pre>
+                        <button class="copy-code-btn" onclick="copyCode(this)">📋 Copy</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Code Playground Section -->
+        <section class="code-playground">
+            <h2 class="section-title">🎮 Live Code Playground</h2>
+            <p class="section-description">Write your own code and see the result instantly!</p>
+            
+            <div class="playground-container">
+                <div class="playground-tabs">
+                    <button class="playground-tab active" onclick="switchPlayground('html')">HTML</button>
+                    <button class="playground-tab" onclick="switchPlayground('css')">CSS</button>
+                    <button class="playground-tab" onclick="switchPlayground('js')">JavaScript</button>
+                </div>
+                
+                <div class="playground-editors">
+                    <div class="editor-panel active" id="html-panel">
+                        <textarea id="htmlCode" class="playground-editor" placeholder="Write HTML here...">&lt;div class="playground-box"&gt;
+    &lt;h3&gt;Hello from Playground!&lt;/h3&gt;
+    &lt;p&gt;Edit this code to see changes&lt;/p&gt;
+    &lt;button onclick="alert('Hi!')"&gt;Click Me&lt;/button&gt;
+&lt;/div&gt;</textarea>
+                    </div>
+                    
+                    <div class="editor-panel" id="css-panel">
+                        <textarea id="cssCode" class="playground-editor" placeholder="Write CSS here...">.playground-box {
+    background: linear-gradient(135deg, #3498db, #e74c3c);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}</textarea>
+                    </div>
+                    
+                    <div class="editor-panel" id="js-panel">
+                        <textarea id="jsCode" class="playground-editor" placeholder="Write JavaScript here...">// Write your JavaScript here
+console.log('Playground ready!');
+
+// Example function
+function greet() {
+    alert('Hello from JavaScript!');
+}</textarea>
+                    </div>
+                </div>
+                
+                <div class="playground-controls">
+                    <button class="btn-run" onclick="runPlayground()">▶ Run Code</button>
+                    <button class="btn-reset" onclick="resetPlayground()">↺ Reset</button>
+                </div>
+                
+                <div class="playground-output" id="playgroundOutput">
+                    <iframe id="playgroundFrame" title="Code Playground"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bookmarks / Favorites Section -->
+        <section class="bookmarks-section">
+            <h2 class="section-title">⭐ Your Bookmarks</h2>
+            <p class="section-description">Save your favorite examples for quick reference</p>
+            
+            <div class="bookmarks-container" id="bookmarksContainer">
+                <p class="empty-bookmarks">No bookmarks yet. Click the ★ on any example to save it.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>TechEdu Learning Hub</h3>
+                <p>Making web development accessible for college students since 2026</p>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/">MDN Web Docs</a></li>
+                    <li><a href="https://www.w3schools.com/">W3Schools</a></li>
+                    <li><a href="https://css-tricks.com/">CSS-Tricks</a></li>
+                    <li><a href="https://javascript.info/">JavaScript.info</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <p>📧 info@techeduhub.com</p>
+                <p>Student Project for APT 1040</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 TechEdu Learning Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="TechEdu Learning Hub.js"></script>
+    <script src="Examples.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+Home Page (index.html)
+│
+├── About Us (about.html)
+│
+├── HTML Tutorials (html-tutorials.html)
+│   ├── HTML Basics
+│   ├── HTML Tables
+│   └── HTML Forms
+│
+├── CSS Tutorials (css-tutorials.html)
+│   ├── CSS Fundamentals
+│   ├── CSS3 Advanced Features
+│   └── Responsive Design
+│
+├── JavaScript Tutorials (javascript.html)
+│   ├── JavaScript Basics
+│   └── Interactive Examples
+│
+├── Examples Gallery (examples.html)
+│   ├── Table Examples
+│   ├── Form Examples
+│   └── CSS3 Effects
+│
+└── Contact Us (contact.html)

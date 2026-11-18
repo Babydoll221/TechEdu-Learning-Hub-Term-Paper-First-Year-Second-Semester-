@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn JavaScript from scratch with interactive tutorials, live code editors, and practical exercises. Master DOM manipulation, events, functions, and more.">
+    <meta name="keywords" content="JavaScript tutorial, JS, web development, programming, interactive tutorials">
+    <meta name="author" content="TechEdu Team">
+    <title>JavaScript Tutorials | TechEdu Learning Hub</title>
+    <link rel="stylesheet" href="TechEdu Learning Hub.css">
+    <link rel="stylesheet" href="Javascript Page.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="TechEdu Learning Hub Logo.png" alt="TechEdu Logo - Stylized graduation cap and code brackets" width="60" height="60">
+            <h1>TechEdu <span>Learning Hub</span></h1>
+        </div>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="TechEdu Learning Hub.html">Home</a></li>
+                <li><a href="About Us.html">About</a></li>
+                <li><a href="HTML Page.html">HTML</a></li>
+                <li><a href="CSS Page.html">CSS</a></li>
+                <li><a href="examples.html">Examples</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page Hero Section -->
+        <section class="tutorial-hero js-hero">
+            <div class="hero-content">
+                <h1>JavaScript<span>.</span></h1>
+                <p>Bring your websites to life with interactive JavaScript. Learn the language of the web.</p>
+                <div class="hero-stats">
+                    <span>📚 10 Modules</span>
+                    <span>💻 30+ Examples</span>
+                    <span>⚡ Interactive</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- JavaScript Intro Banner -->
+        <div class="js-intro-banner">
+            <div class="banner-content">
+                <div class="banner-icon">⚡</div>
+                <div class="banner-text">
+                    <h3>JavaScript makes websites interactive!</h3>
+                    <p>HTML is structure, CSS is style, JavaScript is behavior. Click buttons, validate forms, create animations, and more.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tutorial Container - Sidebar + Main Content -->
+        <div class="tutorial-container">
+            <!-- Sidebar Navigation -->
+            <aside class="tutorial-sidebar">
+                <h3>JavaScript Tutorials</h3>
+                <ul class="toc-list">
+                    <li><a href="#intro" class="toc-link active">1. Introduction to JavaScript</a></li>
+                    <li><a href="#variables" class="toc-link">2. Variables & Data Types</a></li>
+                    <li><a href="#operators" class="toc-link">3. Operators & Expressions</a></li>
+                    <li><a href="#conditionals" class="toc-link">4. Conditionals (if/else)</a></li>
+                    <li><a href="#loops" class="toc-link">5. Loops</a></li>
+                    <li><a href="#functions" class="toc-link">6. Functions</a></li>
+                    <li><a href="#arrays" class="toc-link">7. Arrays</a></li>
+                    <li><a href="#objects" class="toc-link">8. Objects</a></li>
+                    <li><a href="#dom" class="toc-link">9. DOM Manipulation</a></li>
+                    <li><a href="#events" class="toc-link">10. Events</a></li>
+                    <li><a href="#projects" class="toc-link">11. Mini Projects</a></li>
+                </ul>
+                
+                <div class="progress-tracker">
+                    <h4>Your Progress</h4>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%;" id="progressFill">0%</div>
+                    </div>
+                    <p class="progress-text" id="progressText">0/10 completed</p>
+                    <button class="btn-reset" id="resetProgress">Reset Progress</button>
+                </div>
+
+                <div class="sidebar-note">
+                    <h4>💡 Try It Yourself</h4>
+                    <p>All code examples are editable. Click "Run" to see the result instantly!</p>
+                </div>
+            </aside>
+
+            <!-- Main Tutorial Content -->
+            <div class="tutorial-content js-content">
+                <!-- Introduction Section -->
+                <section id="intro" class="tutorial-section">
+                    <h2>1. Introduction to JavaScript</h2>
+                    <div class="section-meta">
+                        <span class="reading-time">⏱️ 6 min read</span>
+                        <span class="difficulty beginner">🔰 Beginner</span>
+                    </div>
+                    
+                    <div class="concept-box">
+                        <h3>What is JavaScript?</h3>
+                        <p><strong>JavaScript</strong> is a programming language that adds interactivity to websites. It was created in 1995 and has become one of the most popular programming languages in the world.</p>
+                        
+                        <div class="highlight">
+                            <p>💡 <strong>Key Point:</strong> JavaScript is not related to Java. They're different languages with similar names!</p>
+                        </div>
+                        
+                        <h4>What can JavaScript do?</h4>
+                        <ul class="styled-list">
+                            <li>✨ Change HTML content and attributes</li>
+                            <li>🎨 Modify CSS styles dynamically</li>
+                            <li>👀 Respond to user actions (clicks, typing, mouse movements)</li>
+                            <li>✅ Validate form data before sending to server</li>
+                            <li>🌐 Fetch data from servers (AJAX/Fetch API)</li>
+                            <li>🎮 Create animations and games</li>
+                        </ul>
+                        
+                        <h4>JavaScript Example</h4>
+                        <div class="code-block">
+                            <pre><code>// This is a comment - JavaScript ignores this
+// Display a popup message
+alert('Hello, World!');
+
+// Change HTML content
+document.getElementById('demo').innerHTML = 'Text changed by JavaScript!';
+
+// Respond to clicks
+function buttonClicked() {
+    console.log('Button was clicked!');
+}</code></pre>
+                            <button class="copy-btn" onclick="copyCode(this)">📋 Copy</button>
+                        </div>
+                    </div>
+                    
+                    <div class="concept-box">
+                        <h3>Where to Put JavaScript</h3>
+                        
+                        <h4>1. Internal JavaScript (in HTML file)</h4>
+                        <div class="code-block">
+                            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;script&gt;
+        // JavaScript goes here
+        function sayHello() {
+            alert('Hello!');
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;button onclick="sayHello()"&gt;Click Me&lt;/button&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                        </div>
+                        
+                        <h4>2. External JavaScript (separate file)</h4>
+                        <div class="code-block">
+                            <pre><code>&lt;!-- In HTML file --&gt;
+&lt;script src="js/script.js"&gt;&lt;/script&gt;
+
+&lt;!-- In script.js file --&gt;
+function sayHello() {
+    alert('Hello from external file!');
+}</code></pre>
+                        </div>
+                        
+                        <div class="note">
+                            <p><strong>📚 Lecture Connection:</strong> This matches iw3htp5_06.ppt, which shows JavaScript in both &lt;script&gt; tags and external files.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="try-it-yourself">
+                        <h3>✏️ Try Your First JavaScript</h3>
+                        <p>Click the button to run JavaScript code:</p>
+                        
+                        <div class="code-editor">
+                            <textarea id="jsIntroEditor" class="js-editor" rows="6">// Edit this code and click Run
+let message = "Hello from JavaScript!";
+alert(message);
+console.log("Check the console!");</textarea>
+                            
+                            <button class="btn-run" onclick="runJavaScript('jsIntroEditor', 'jsIntroOutput')">▶ Run Code</button>
+                        </div>
+                        
+                        <div class="editor-output" id="jsIntroOutput">
+                            <p>Output will appear here. Check the alert dialog too!</p>
+                        </div>
+                        
+                        <div class="js-console-note">
+                            <p><small>💡 Tip: Press F12 to open browser console and see console.log() messages</small></p>
+                        </div>
+                    </div>
+                    
+                    <div class="section-checkpoint">
+                        <h4>✅ Quick Check</h4>
+                        <p>JavaScript is a programming language used for:</p>
+                        <div class="quiz-option" data-correct="true">a) Adding interactivity to web pages</div>
+                        <div class="quiz-option" data-correct="false">b) Styling web pages</div>
+                        <div class="quiz-option" data-correct="false">c) Structuring web content</div>
+                        <div class="quiz-option" data-correct="false">d) Creating databases</div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+                </section>
+
+                <!-- Variables Section -->
+                <section id="variables" class="tutorial-section">
+                    <h2>2. Variables & Data Types</h2>
+                    <div class="section-meta">
+                        <span class="reading-time">⏱️ 8 min read</span>
+                        <span class="difficulty beginner">🔰 Beginner</span>
+                    </div>
+                    
+                    <div class="concept-box">
+                        <h3>What are Variables?</h3>
+                        <p><strong>Variables</strong> are containers for storing data values. Think of them as labeled boxes where you can put information.</p>
+                        
+                        <div class="highlight">
+                            <p>📦 <strong>Analogy:</strong> A variable is like a labeled box. You put something in it, and you can look inside whenever you need it.</p>
+                        </div>
+                        
+                        <h4>Declaring Variables in JavaScript</h4>
+                        
+                        <table class="concept-table">
+                            <thead>
+                                <tr>
+                                    <th>Keyword</th>
+                                    <th>Description</th>
+                                    <th>Example</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>var</code></td>
+                                    <td>Old way (function-scoped) - avoid using</td>
+                                    <td><code>var name = "John";</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>let</code></td>
+                                    <td>Modern way (block-scoped, can be reassigned)</td>
+                                    <td><code>let age = 25;</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>const</code></td>
+                                    <td>Constant (cannot be reassigned)</td>
+                                    <td><code>const PI = 3.14;</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <h4>JavaScript Data Types</h4>
+                        
+                        <div class="data-types-grid">
+                            <div class="data-type-card">
+                                <div class="type-icon">📝</div>
+                                <h5>String</h5>
+                                <p>Text data</p>
+                                <code>let name = "Alice";</code>
+                            </div>
+                            <div class="data-type-card">
+                                <div class="type-icon">🔢</div>
+                                <h5>Number</h5>
+                                <p>Integers & decimals</p>
+                                <code>let age = 25;</code>
+                            </div>
+                            <div class="data-type-card">
+                                <div class="type-icon">✅</div>
+                                <h5>Boolean</h5>
+                                <p>true or false</p>
+                                <code>let isStudent = true;</code>
+                            </div>
+                            <div class="data-type-card">
+                                <div class="type-icon">📦</div>
+                                <h5>Array</h5>
+                                <p>List of items</p>
+                                <code>let colors = ["red", "blue"];</code>
+                            </div>
+                            <div class="data-type-card">
+                                <div class="type-icon">📋</div>
+                                <h5>Object</h5>
+                                <p>Key-value pairs</p>
+                                <code>let person = {name: "John"};</code>
+                            </div>
+                            <div class="data-type-card">
+                                <div class="type-icon">🚫</div>
+                                <h5>Null</h5>
+                                <p>Intentional empty</p>
+                                <code>let data = null;</code>
+                            </div>
+                        </div>
+                        
+                        <h4>typeof Operator</h4>
+                        <p>Use <code>typeof</code> to check a variable's type:</p>
+                        
+                        <div class="code-block">
+                            <pre><code>let name = "Sarah";
+console.log(typeof name); // "string"
+
+let score = 95;
+console.log(typeof score); // "number"
+
+let isLoggedIn = true;
+console.log(typeof isLoggedIn); // "boolean"</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="try-it-yourself">
+                        <h3>✏️ Play with Variables</h3>
+                        
+                        <div class="code-editor">
+                            <textarea id="varEditor" class="js-editor" rows="10">// Declare variables
+let studentName = "Alex";
+let studentAge = 20;
+let isEnrolled = true;
+let courses = ["HTML", "CSS", "JavaScript"];
+
+// Display them (we'll show results below)
+let output = "Name: " + studentName + "\\n";
+output += "Age: " + studentAge + "\\n";
+output += "Enrolled: " + isEnrolled + "\\n";
+output += "Courses: " + courses.join(", ") + "\\n";
+output += "Type of age: " + typeof studentAge;
+
+// Show in alert
+alert(output);</textarea>
+                            
+                            <button class="btn-run" onclick="runJavaScript('varEditor', 'varOutput')">▶ Run Code</button>
+                        </div>
+                        
+                        <div class="editor-output" id="varOutput"></div>
+                    </div>
+                    
+                    <div class="note">
+                        <p><strong>📚 Lecture Connection:</strong> This matches iw3htp5_06.ppt section on variables and data types. JavaScript is loosely typed!</p>
+                    </div>
+                </section>
+
+                <!-- Operators Section -->
+                <section id="operators" class="tutorial-section">
+                    <h2>3. Operators & Expressions</h2>
+                    
+                    <div class="concept-box">
+                        <h3>Arithmetic Operators</h3>
+                        
+                        <table class="operator-table">
+                            <thead>
+                                <tr>
+                                    <th>Operator</th>
+                                    <th>Description</th>
+                                    <th>Example</th>
+                                    <th>Result</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>+</code></td>
+                                    <td>Addition</td>
+                                    <td><code>5 + 3</code></td>
+                                    <td>8</td>
+                                </tr>
+                                <tr>
+                                    <td><code>-</code></td>
+                                    <td>Subtraction</td>
+                                    <td><code>10 - 4</code></td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td><code>*</code></td>
+                                    <td>Multiplication</td>
+                                    <td><code>6 * 7</code></td>
+                                    <td>42</td>
+                                </tr>
+                                <tr>
+                                    <td><code>/</code></td>
+                                    <td>Division</td>
+                                    <td><code>15 / 3</code></td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td><code>%</code></td>
+                                    <td>Modulus (remainder)</td>
+                                    <td><code>17 % 5</code></td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td><code>**</code></td>
+                                    <td>Exponentiation</td>
+                                    <td><code>2 ** 3</code></td>
+                                    <td>8</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <h3>Assignment Operators</h3>
+                        
+                        <table class="operator-table">
+                            <thead>
+                                <tr>
+                                    <th>Operator</th>
+                                    <th>Example</th>
+                                    <th>Same As</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>=</code></td>
+                                    <td><code>x = 5</code></td>
+                                    <td><code>x = 5</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>+=</code></td>
+                                    <td><code>x += 3</code></td>
+                                    <td><code>x = x + 3</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>-=</code></td>
+                                    <td><code>x -= 2</code></td>
+                                    <td><code>x = x - 2</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>*=</code></td>
+                                    <td><code>x *= 4</code></td>
+                                    <td><code>x = x * 4</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>++</code></td>
+                                    <td><code>x++</code></td>
+                                    <td><code>x = x + 1</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>--</code></td>
+                                    <td><code>x--</code></td>
+                                    <td><code>x = x - 1</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <h3>Comparison Operators</h3>
+                        
+                        <table class="operator-table">
+                            <thead>
+                                <tr>
+                                    <th>Operator</th>
+                                    <th>Description</th>
+                                    <th>Example</th>
+                                    <th>Result</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>==</code></td>
+                                    <td>Equal (value only)</td>
+                                    <td><code>5 == "5"</code></td>
+                                    <td>true</td>
+                                </tr>
+                                <tr>
+                                    <td><code>===</code></td>
+                                    <td>Strict equal (value and type)</td>
+                                    <td><code>5 === "5"</code></td>
+                                    <td>false</td>
+                                </tr>
+                                <tr>
+                                    <td><code>!=</code></td>
+                                    <td>Not equal</td>
+                                    <td><code>5 != "5"</code></td>
+                                    <td>false</td>
+                                </tr>
+                                <tr>
+                                    <td><code>!==</code></td>
+                                    <td>Strict not equal</td>
+                                    <td><code>5 !== "5"</code></td>
+                                    <td>true</td>
+                                </tr>
+                                <tr>
+                                    <td><code>></code></td>
+                                    <td>Greater than</td>
+                                    <td><code>10 > 5</code></td>
+                                    <td>true</td>
+                                </tr>
+                                <tr>
+                                    <td><code><</code></td>
+                                    <td>Less than</td>
+                                    <td><code>3 < 7</code></td>
+                                    <td>true</td>
+                                </tr>
+                                <tr>
+                                    <td><code>>=</code></td>
+                                    <td>Greater than or equal</td>
+                                    <td><code>8 >= 8</code></td>
+                                    <td>true</td>
+                                </tr>
+                                <tr>
+                                    <td><code><=</code></td>
+                                    <td>Less than or equal</td>
+                                    <td><code>5 <= 4</code></td>
+                                    <td>false</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <div class="note">
+                            <p><strong>⚠️ Important:</strong> Always use <code>===</code> (strict equality) unless you have a specific reason to use <code>==</code>. It prevents unexpected type conversions!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="try-it-yourself">
+                        <h3>✏️ Try Operators</h3>
+                        
+                        <div class="code-editor">
+                            <textarea id="opEditor" class="js-editor" rows="12">let a = 15;
+let b = 4;
+
+console.log("a + b =", a + b);
+console.log("a - b =", a - b);
+console.log("a * b =", a * b);
+console.log("a / b =", a / b);
+console.log("a % b =", a % b);
+console.log("a ** b =", a ** b);
+
+// Comparison
+console.log("a == b:", a == b);
+console.log("a > b:", a > b);
+
+// String concatenation
+let firstName = "John";
+let lastName = "Doe";
+console.log("Full name:", firstName + " " + lastName);</textarea>
+                            
+                            <button class="btn-run" onclick="runJavaScript('opEditor', 'opOutput')">▶ Run Code</button>
+                        </div>
+                        
+                        <div class="editor-output" id="opOutput"></div>
+                    </div>
+                </section>
+
+                <!-- Conditionals Section -->
+                <section id="conditionals" class="tutorial-section">
+                    <h2>4. Conditionals (if/else)</h2>
+                    
+                    <div class="concept-box">
+                        <h3>if Statement</h3>
+                        <p>The <code>if</code> statement executes code only if a condition is true.</p>
+                        
+                        <div class="code-block">
+                            <pre><code>let age = 18;
+
+if (age >= 18) {
+    console.log("You can vote!");
+}</code></pre>
+                        </div>
+                        
+                        <h3>if...else Statement</h3>
+                        <div class="code-block">
+                            <pre><code>let temperature = 25;
+
+if (temperature > 30) {
+    console.log("It's hot outside!");
+} else {
+    console.log("It's not too hot.");
+}</code></pre>
+                        </div>
+                        
+                        <h3>if...else if...else</h3>
+                        <div class="code-block">
+                            <pre><code>let score = 85;
+
+if (score >= 90) {
+    console.log("Grade: A");
+} else if (score >= 80) {
+    console.log("Grade: B");
+} else if (score >= 70) {
+    console.log("Grade: C");
+} else {
+    console.log("Grade: F");
+}</code></pre>
+                        </div>
+                        
+                        <h3>Switch Statement</h3>
+                        <div class="code-block">
+                            <pre><code>let day = "Monday";
+
+switch(day) {
+    case "Monday":
+        console.log("Start of week!");
+        break;
+    case "Friday":
+        console.log("Weekend almost here!");
+        break;
+    case "Saturday":
+    case "Sunday":
+        console.log("Weekend!");
+        break;
+    default:
+        console.log("Regular day");
+}</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="interactive-demo">
+                        <h3>🎮 Interactive: Grade Calculator</h3>
+                        <p>Enter a score to see your grade:</p>
+                        
+                        <div class="demo-controls">
+                            <input type="number" id="scoreInput" placeholder="Enter score (0-100)" min="0" max="100">
+                            <button class="btn-primary" onclick="calculateGrade()">Check Grade</button>
+                        </div>
+                        
+                        <div class="demo-result" id="gradeResult">
+                            <p>Your grade will appear here</p>
+                        </div>
+                    </div>
+                    
+                    <div class="try-it-yourself">
+                        <h3>✏️ Write Your Own Condition</h3>
+                        
+                        <div class="code-editor">
+                            <textarea id="conditionEditor" class="js-editor" rows="12">// Write a program that checks if a number is positive, negative, or zero
+let number = -5;
+
+if (number > 0) {
+    console.log(number + " is positive");
+} else if (number < 0) {
+    console.log(number + " is negative");
+} else {
+    console.log("The number is zero");
+}
+
+// Add another condition - check if even or odd
+if (number % 2 === 0) {
+    console.log(number + " is even");
+} else {
+    console.log(number + " is odd");
+}</textarea>
+                            
+                            <button class="btn-run" onclick="runJavaScript('conditionEditor', 'conditionOutput')">▶ Run Code</button>
+                        </div>
+                        
+                        <div class="editor-output" id="conditionOutput"></div>
+                    </div>
+                </section>
+
+                <!-- Loops Section -->
+                <section id="loops" class="tutorial-section">
+                    <h2>5. Loops</h2>
+                    
+                    <div class="concept-box">
+                        <h3>for Loop</h3>
+                        <p>Run code a specific number of times:</p>
+                        
+                        <div class="code-block">
+                            <pre><code>// Count from 1 to 5
+for (let i = 1; i <= 5; i++) {
+    console.log("Count: " + i);
+}</code></pre>
+                        </div>
+                        
+                        <h3>while Loop</h3>
+                        <p>Run while a condition is true:</p>
+                        
+                        <div class="code-block">
+                            <pre><code>let i = 1;
+while (i <= 5) {
+    console.log("Number: " + i);
+    i++;
+}</code></pre>
+                        </div>
+                        
+                        <h3>do...while Loop</h3>
+                        <p>Run at least once, then while condition is true:</p>
+                        
+                        <div class="code-block">
+                            <pre><code>let i = 1;
+do {
+    console.log("This runs at least once");
+    i++;
+} while (i <= 3);</code></pre>
+                        </div>
+                        
+                        <h3>Looping Through Arrays</h3>
+                        <div class="code-block">
+                            <pre><code>let fruits = ["apple", "banana", "orange"];
+
+// for loop
+for (let i = 0; i < fruits.length; i++) {
+    console.log(fruits[i]);
+}
+
+// for...of loop (simpler!)
+for (let fruit of fruits) {
+    console.log(fruit);
+}</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="try-it-yourself">
+                        <h3>✏️ Try Loops</h3>
+                        
+                        <div class="code-editor">
+                            <textarea id="loopEditor" class="js-editor" rows="14">// Create a multiplication table for 5
+console.log("Multiplication table for 5:");
+for (let i = 1; i <= 10; i++) {
+    console.log(`5 × ${i} = ${5 * i}`);
+}
+
+console.log("\n---\n");
+
+// Sum of numbers 1 to 10
+let sum = 0;
+for (let i = 1; i <= 10; i++) {
+    sum += i;
+}
+console.log("Sum of 1 to 10 = " + sum);
+
+console.log("\n---\n");
+
+// Loop through an array
+let colors = ["red", "green", "blue", "yellow"];
+console.log("Colors:");
+for (let color of colors) {
+    console.log(" - " + color);
+}</textarea>
+                            
+                            <button class="btn-run" onclick="runJavaScript('loopEditor', 'loopOutput')">▶ Run Code</button>
+                        </div>
+                        
+                        <div class="editor-output" id="loopOutput"></div>
+                    </div>
+                </section>
+
+                <!-- Functions Section -->
+                <section id="functions" class="tutorial-section">
+                    <h2>6. Functions</h2>
+                    
+                    <div class="concept-box">
+                        <h3>What are Functions?</h3>
+                        <p><strong>Functions</strong> are reusable blocks of code that perform specific tasks.</p>
+                        
+                        <h4>Function Declaration</h4>
+                        <div class="code-block">
+                            <pre><code>function greet(name) {
+    return "Hello, " + name + "!";
+}
+
+// Call the function
+let message = greet("Alice");
+console.log(message); // "Hello, Alice!"</code></pre>
+                        </div>
+                        
+                        <h4>Function Expression</h4>
+                        <div class="code-block">
+                            <pre><code>const square = function(x) {
+    return x * x;
+};
+
+console.log(square(5)); // 25</code></pre>
+                        </div>
+                        
+                        <h4>Arrow Functions (Modern)</h4>
+                        <div class="code-block">
+                            <pre><code>// Shorter syntax!
+const add = (a, b) => a + b;
+
+const multiply = (a, b) => {
+    let result = a * b;
+    return result;
+};
+
+console.log(add(5, 3));      // 8
+console.log(multiply(4, 2)); // 8</code></pre>
+                        </div>
+                        
+                        <h4>Parameters vs. Arguments</h4>
+                        <ul>
+                            <li><strong>Parameters:</strong> Variables listed in function definition</li>
+                            <li><strong>Arguments:</strong> Values passed when calling the function</li>
+                        </ul>
+                        
+                        <div class="code-block">
+                            <pre><code>// 'a' and 'b' are parameters
+function add(a, b) {
+    return a + b;
+}
+
+// 5 and 3 are arguments
+add(5, 3);</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="interactive-demo">
+                        <h3>🎯 Function Challenge</h3>
+                        <p>Create a function that converts Celsius to Fahrenheit:</p>
+                        <p>Formula: <code>F = C × 9/5 + 32</code></p>
+                        
+                        <div class="demo-controls">
+                            <input type="number" id="celsiusInput" placeholder="Enter Celsius" value="25">
+                            <button class="btn-primary" onclick="convertTemperature()">Convert</button>
+                        </div>
+                        
+                        <div class="demo-result" id="tempResult"></div>
+                    </div>
+                    
+                    <div class="try-it-yourself">
+                        <h3>✏️ Write Functions</h3>
+                        
+                        <div class="code-editor">
+                            <textarea id="functionEditor" class="js-editor" rows="16">// Define functions
+function calculateArea(length, width) {
+    return length * width;
+}
+
+const isEven = (number) => number % 2 === 0;
+
+function getMax(a, b, c) {
+    return Math.max(a, b, c);
+}
+
+// Test the functions
+console.log("Area of 5×3:", calculateArea(5, 3));
+console.log("Is 7 even?", isEven(7));
+console.log("Is 10 even?", isEven(10));
+console.log("Max of 12, 45, 23:", getMax(12, 45, 23));</textarea>
+                            
+                            <button class="btn-run" onclick="runJavaScript('functionEditor', 'functionOutput')">▶ Run Code</button>
+                        </div>
+                        
+                        <div class="editor-output" id="functionOutput"></div>
+                    </div>
+                </section>
+
+                <!-- Arrays Section -->
+                <section id="arrays" class="tutorial-section">
+                    <h2>7. Arrays</h2>
+                    
+                    <div class="concept-box">
+                        <h3>Creating Arrays</h3>
+                        
+                        <div class="code-block">
+                            <pre><code>// Array literal (preferred)
+let fruits = ["apple", "banana", "orange"];
+
+// Using Array constructor
+let numbers = new Array(1, 2, 3, 4, 5);
+
+// Empty array
+let empty = [];
+
+// Mixed types
+let mixed = ["text", 42, true, null];</code></pre>
+                        </div>
+                        
+                        <h3>Accessing Array Elements</h3>
+                        <p>Arrays are zero-indexed (first element is at index 0).</p>
+                        
+                        <div class="code-block">
+                            <pre><code>let colors = ["red", "green", "blue"];
+
+console.log(colors[0]); // "red"
+console.log(colors[1]); // "green"
+console.log(colors[2]); // "blue"
+console.log(colors.length); // 3</code></pre>
+                        </div>
+                        
+                        <h3>Common Array Methods</h3>
+                        
+                        <table class="concept-table">
+                            <thead>
+                                <tr>
+                                    <th>Method</th>
+                                    <th>Description</th>
+                                    <th>Example</th>
+                                    <th>Result</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>push()</code></td>
+                                    <td>Add to end</td>
+                                    <td><code>arr.push(4)</code></td>
+                                    <td>[1,2,3,4]</td>
+                                </tr>
+                                <tr>
+                                    <td><code>pop()</code></td>
+                                    <td>Remove from end</td>
+                                    <td><code>arr.pop()</code></td>
+                                    <td>returns last item</td>
+                                </tr>
+                                <tr>
+                                    <td><code>unshift()</code></td>
+                                    <td>Add to beginning</td>
+                                    <td><code>arr.unshift(0)</code></td>
+                                    <td>[0,1,2,3]</td>
+                                </tr>
+                                <tr>
+                                    <td><code>shift()</code></td>
+                                    <td>Remove from beginning</td>
+                                    <td><code>arr.shift()</code></td>
+                                    <td>returns first item</td>
+                                </tr>
+                                <tr>
+                                    <td><code>indexOf()</code></td>
+                                    <td>Find index</td>
+                                    <td><code>arr.indexOf(3)</code></td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td><code>includes()</code></td>
+                                    <td>Check if exists</td>
+                                    <td><code>arr.includes(5)</code></td>
+                                    <td>false</td>
+                                </tr>
+                                <tr>
+                                    <td><code>join()</code></td>
+                                    <td>Convert to string</td>
+                                    <td><code>arr.join("-")</code></td>
+                                    <td>"1-2-3"</td>
+                                </tr>
+                                <tr>
+                                    <td><code>slice()</code></td>
+                                    <td>Extract portion</td>
+                                    <td><code>arr.slice(1,3)</code></td>
+                                    <td>[2,3]</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="try-it-yourself">
+                        <h3>✏️ Play with Arrays</h3>
+                        
+                        <div class="code-editor">
+                            <textarea id="arrayEditor" class="js-editor" rows="16">// Create an array of your favorite movies
+let movies = ["Inception", "The Matrix", "Interstellar"];
+
+console.log("My movies:", movies);
+console.log("Number of movies:", movies.length);
+
+// Add a new movie
+movies.push("Avatar");
+console.log("After push:", movies);
+
+// Remove last movie
+let last = movies.pop();
+console.log("Removed:", last);
+console.log("Now:", movies);
+
+// Loop through array
+console.log("\nAll movies:");
+movies.forEach((movie, index) => {
+    console.log(`${index + 1}. ${movie}`);
+});
+
+// Check if a movie exists
+console.log("Has 'Inception'?", movies.includes("Inception"));</textarea>
+                            
+                            <button class="btn-run" onclick="runJavaScript('arrayEditor', 'arrayOutput')">▶ Run Code</button>
+                        </div>
+                        
+                        <div class="editor-output" id="arrayOutput"></div>
+                    </div>
+                </section>
+
+                <!-- Objects Section -->
+                <section id="objects" class="tutorial-section">
+                    <h2>8. Objects</h2>
+                    
+                    <div class="concept-box">
+                        <h3>What are Objects?</h3>
+                        <p><strong>Objects</strong> store collections of key-value pairs. They represent real-world entities with properties.</p>
+                        
+                        <div class="code-block">
+                            <pre><code>// Create an object
+let student = {
+    firstName: "John",
+    lastName: "Doe",
+    age: 20,
+    isEnrolled: true,
+    grades: [85, 92, 78]
+};
+
+// Access properties
+console.log(student.firstName);  // "John"
+console.log(student["lastName"]); // "Doe"
+console.log(student.age);         // 20
+
+// Modify properties
+student.age = 21;
+student.grades.push(95);</code></pre>
+                        </div>
+                        
+                        <h3>Object Methods</h3>
+                        <p>Objects can also contain functions (methods).</p>
+                        
+                        <div class="code-block">
+                            <pre><code>let car = {
+    brand: "Toyota",
+    model: "Camry",
+    year: 2020,
+    start: function() {
+        console.log("Car started!");
+    },
+    getInfo() { // Shorthand syntax
+        return `${this.brand} ${this.model}, ${this.year}`;
+    }
+};
+
+car.start();
+console.log(car.getInfo());</code></pre>
+                        </div>
+                        
+                        <h3>Looping Through Objects</h3>
+                        
+                        <div class="code-block">
+                            <pre><code>let person = {name: "Alice", age: 25, city: "New York"};
+
+// Get keys
+console.log(Object.keys(person));   // ["name", "age", "city"]
+
+// Get values
+console.log(Object.values(person)); // ["Alice", 25, "New York"]
+
+// Loop through properties
+for (let key in person) {
+    console.log(`${key}: ${person[key]}`);
+}</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="try-it-yourself">
+                        <h3>✏️ Create Your Own Object</h3>
+                        
+                        <div class="code-editor">
+                            <textarea id="objectEditor" class="js-editor" rows="18">// Create a book object
+let book = {
+    title: "JavaScript for Beginners",
+    author: "Jane Smith",
+    pages: 350,
+    isPublished: true,
+    chapters: ["Variables", "Functions", "Objects", "DOM"],
+    
+    // Method
+    summary: function() {
+        return `${this.title} by ${this.author}, ${this.pages} pages`;
+    },
+    
+    hasChapter: function(chapterName) {
+        return this.chapters.includes(chapterName);
+    }
+};
+
+// Use the object
+console.log("Book title:", book.title);
+console.log("Summary:", book.summary());
+console.log("Has 'Functions' chapter?", book.hasChapter("Functions"));
+console.log("Has 'Arrays' chapter?", book.hasChapter("Arrays"));
+
+console.log("\nAll chapters:");
+book.chapters.forEach((chapter, i) => {
+    console.log(`${i + 1}. ${chapter}`);
+});</textarea>
+                            
+                            <button class="btn-run" onclick="runJavaScript('objectEditor', 'objectOutput')">▶ Run Code</button>
+                        </div>
+                        
+                        <div class="editor-output" id="objectOutput"></div>
+                    </div>
+                </section>
+
+                <!-- DOM Manipulation Section -->
+                <section id="dom" class="tutorial-section">
+                    <h2>9. DOM Manipulation</h2>
+                    
+                    <div class="concept-box">
+                        <h3>What is the DOM?</h3>
+                        <p><strong>DOM (Document Object Model)</strong> is a programming interface for HTML documents. It represents the page as a tree of objects that JavaScript can manipulate.</p>
+                        
+                        <div class="highlight">
+                            <p>💡 With JavaScript, you can change HTML content, attributes, styles, and even add/remove elements!</p>
+                        </div>
+                        
+                        <h3>Selecting Elements</h3>
+                        
+                        <table class="concept-table">
+                            <thead>
+                                <tr>
+                                    <th>Method</th>
+                                    <th>Description</th>
+                                    <th>Example</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>getElementById()</code></td>
+                                    <td>Select by ID</td>
+                                    <td><code>document.getElementById("header")</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>getElementsByClassName()</code></td>
+                                    <td>Select by class</td>
+                                    <td><code>document.getElementsByClassName("card")</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>getElementsByTagName()</code></td>
+                                    <td>Select by tag</td>
+                                    <td><code>document.getElementsByTagName("p")</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>querySelector()</code></td>
+                                    <td>Select first match (CSS selector)</td>
+                                    <td><code>document.querySelector(".card")</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>querySelectorAll()</code></td>
+                                    <td>Select all matches</td>
+                                    <td><code>document.querySelectorAll("p.intro")</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <h3>Changing Content</h3>
+                        
+                        <div class="code-block">
+                            <pre><code>// Change text content
+document.getElementById("demo").textContent = "New text!";
+
+// Change HTML content (can include tags)
+document.getElementById("demo").innerHTML = "&lt;strong&gt;Bold text&lt;/strong&gt;";
+
+// Change attributes
+document.querySelector("img").src = "new-image.jpg";
+document.querySelector("a").href = "https://example.com";
+
+// Change styles
+document.getElementById("box").style.color = "red";
+document.getElementById("box").style.backgroundColor = "blue";</code></pre>
+                        </div>
+                        
+                        <h3>Creating and Adding Elements</h3>
+                        
+                        <div class="code-block">
+                            <pre><code>// Create new element
+let newDiv = document.createElement("div");
+newDiv.textContent = "I'm new!";
+newDiv.className = "box";
+
+// Add to page
+document.body.appendChild(newDiv);
+
+// Insert before another element
+let parent = document.getElementById("container");
+let reference = document.getElementById("reference");
+parent.insertBefore(newDiv, reference);
+
+// Remove element
+let element = document.getElementById("to-remove");
+element.remove();</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="interactive-demo" id="domDemo">
+                        <h3>🎮 Live DOM Demo</h3>
+                        <p>Click the buttons to see DOM manipulation in action:</p>
+                        
+                        <div class="dom-demo-area">
+                            <div id="demoBox" class="demo-box">
+                                This box will change!
+                            </div>
+                            
+                            <div class="demo-controls">
+                                <button class="btn-small" onclick="changeText()">Change Text</button>
+                                <button class="btn-small" onclick="changeColor()">Change Color</button>
+                                <button class="btn-small" onclick="addElement()">Add Element</button>
+                                <button class="btn-small" onclick="resetDemo()">Reset</button>
+                            </div>
+                            
+                            <div id="demoContainer" class="demo-container">
+                                <p>New elements will appear here ↓</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="try-it-yourself">
+                        <h3>✏️ Try DOM Manipulation</h3>
+                        <p>This editor simulates DOM manipulation (in a real page, you'd see the changes live):</p>
+                        
+                        <div class="code-editor">
+                            <textarea id="domEditor" class="js-editor" rows="12">// This code would normally run on a page with HTML elements
+// We'll simulate the output
+
+console.log("DOM manipulation examples:");
+console.log("1. Changing text: element.textContent = 'New text'");
+console.log("2. Changing style: element.style.color = 'red'");
+console.log("3. Adding class: element.classList.add('highlight')");
+console.log("4. Creating element: document.createElement('div')");
+
+// Show what the DOM methods would return
+console.log("\nExample: Selecting elements");
+console.log("document.querySelector('#header') → would return header element");
+console.log("document.querySelectorAll('.card').length → number of .card elements");</textarea>
+                            
+                            <button class="btn-run" onclick="runJavaScript('domEditor', 'domOutput')">▶ Run Code</button>
+                        </div>
+                        
+                        <div class="editor-output" id="domOutput"></div>
+                    </div>
+                </section>
+
+                <!-- Events Section -->
+                <section id="events" class="tutorial-section">
+                    <h2>10. Events</h2>
+                    
+                    <div class="concept-box">
+                        <h3>What are Events?</h3>
+                        <p><strong>Events</strong> are actions that happen in the browser that JavaScript can respond to: clicks, key presses, mouse movements, form submissions, etc.</p>
+                        
+                        <h3>Common Events</h3>
+                        
+                        <table class="concept-table">
+                            <thead>
+                                <tr>
+                                    <th>Event</th>
+                                    <th>Description</th>
+                                    <th>Example</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>click</code></td>
+                                    <td>Element clicked</td>
+                                    <td><code>button.onclick = function() {}</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>mouseover</code></td>
+                                    <td>Mouse enters element</td>
+                                    <td><code>element.onmouseover</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>mouseout</code></td>
+                                    <td>Mouse leaves element</td>
+                                    <td><code>element.onmouseout</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>keydown</code></td>
+                                    <td>Key pressed</td>
+                                    <td><code>input.onkeydown</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>submit</code></td>
+                                    <td>Form submitted</td>
+                                    <td><code>form.onsubmit</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>load</code></td>
+                                    <td>Page loaded</td>
+                                    <td><code>window.onload</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>input</code></td>
+                                    <td>Input value changed</td>
+                                    <td><code>input.oninput</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <h3>Adding Event Listeners</h3>
+                        
+                        <h4>Method 1: Inline (not recommended)</h4>
+                        <div class="code-block">
+                            <pre><code>&lt;button onclick="alert('Clicked!')"&gt;Click&lt;/button&gt;</code></pre>
+                        </div>
+                        
+                        <h4>Method 2: Property</h4>
+                        <div class="code-block">
+                            <pre><code>let btn = document.getElementById("myButton");
+btn.onclick = function() {
+    alert("Button clicked!");
+};</code></pre>
+                        </div>
+                        
+                        <h4>Method 3: addEventListener (best)</h4>
+                        <div class="code-block">
+                            <pre><code>let btn = document.getElementById("myButton");
+btn.addEventListener("click", function() {
+    alert("Button clicked!");
+});
+
+// Can add multiple listeners
+btn.addEventListener("click", function() {
+    console.log("This also runs!");
+});</code></pre>
+                        </div>
+                        
+                        <h3>Event Object</h3>
+                        <p>Event handlers receive an event object with information about the event.</p>
+                        
+                        <div class="code-block">
+                            <pre><code>document.getElementById("myInput").addEventListener("keydown", function(event) {
+    console.log("Key pressed:", event.key);
+    console.log("Target element:", event.target);
+    
+    if (event.key === "Enter") {
+        console.log("Enter pressed!");
+    }
+});</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="interactive-demo" id="eventDemo">
+                        <h3>🎮 Interactive Event Demo</h3>
+                        
+                        <div class="event-demo-area">
+                            <div class="demo-row">
+                                <button class="btn-demo" id="eventDemoBtn">Click Me!</button>
+                                <div class="event-output" id="eventOutput">Event output will appear here</div>
+                            </div>
+                            
+                            <div class="demo-row">
+                                <input type="text" id="eventDemoInput" placeholder="Type something...">
+                            </div>
+                            
+                            <div class="demo-row">
+                                <div id="hoverDemo" class="hover-box">
+                                    Hover over me!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="try-it-yourself">
+                        <h3>✏️ Event Challenge</h3>
+                        <p>Write JavaScript to handle different events:</p>
+                        
+                        <div class="code-editor">
+                            <textarea id="eventEditor" class="js-editor" rows="14">// Simulating event handling
+console.log("Event handling examples:");
+
+// Click event
+function handleClick() {
+    console.log("Button clicked!");
+}
+
+// Mouse events
+function handleMouseOver() {
+    console.log("Mouse over element");
+}
+
+function handleMouseOut() {
+    console.log("Mouse left element");
+}
+
+// Key event simulation
+function handleKeyPress(key) {
+    console.log(`Key pressed: ${key}`);
+}
+
+// Test our functions
+handleClick();
+handleMouseOver();
+handleKeyPress("Enter");</textarea>
+                            
+                            <button class="btn-run" onclick="runJavaScript('eventEditor', 'eventOutput')">▶ Run Code</button>
+                        </div>
+                        
+                        <div class="editor-output" id="eventOutput"></div>
+                    </div>
+                </section>
+
+                <!-- Mini Projects Section -->
+                <section id="projects" class="tutorial-section">
+                    <h2>11. Mini Projects</h2>
+                    
+                    <div class="project-card">
+                        <h3>Project 1: Counter App</h3>
+                        <p>Build a simple counter with increment, decrement, and reset buttons.</p>
+                        
+                        <div class="project-demo">
+                            <div class="counter-display" id="counterDisplay">0</div>
+                            <div class="counter-controls">
+                                <button class="btn-counter" onclick="decrementCounter()">-</button>
+                                <button class="btn-counter" onclick="resetCounter()">0</button>
+                                <button class="btn-counter" onclick="incrementCounter()">+</button>
+                            </div>
+                        </div>
+                        
+                        <details>
+                            <summary>View Code</summary>
+                            <div class="code-block">
+                                <pre><code>let count = 0;
+const display = document.getElementById('counterDisplay');
+
+function increment() {
+    count++;
+    display.textContent = count;
+}
+
+function decrement() {
+    count--;
+    display.textContent = count;
+}
+
+function reset() {
+    count = 0;
+    display.textContent = count;
+}</code></pre>
+                            </div>
+                        </details>
+                    </div>
+                    
+                    <div class="project-card">
+                        <h3>Project 2: To-Do List</h3>
+                        <p>Create a simple to-do list (conceptual example).</p>
+                        
+                        <div class="project-demo todo-demo">
+                            <div class="todo-input-group">
+                                <input type="text" id="todoInput" placeholder="Add a task...">
+                                <button class="btn-small" onclick="addTodo()">Add</button>
+                            </div>
+                            <ul class="todo-list" id="todoList">
+                                <li>Learn JavaScript <button onclick="this.parentElement.remove()">✓</button></li>
+                                <li>Build a project <button onclick="this.parentElement.remove()">✓</button></li>
+                            </ul>
+                        </div>
+                        
+                        <details>
+                            <summary>View Code</summary>
+                            <div class="code-block">
+                                <pre><code>function addTodo() {
+    let input = document.getElementById('todoInput');
+    let text = input.value.trim();
+    
+    if (text) {
+        let li = document.createElement('li');
+        li.innerHTML = text + ' &lt;button onclick="this.parentElement.remove()"&gt;✓&lt;/button&gt;';
+        document.getElementById('todoList').appendChild(li);
+        input.value = '';
+    }
+}</code></pre>
+                            </div>
+                        </details>
+                    </div>
+                    
+                    <div class="project-card">
+                        <h3>Project 3: Color Flipper</h3>
+                        <p>Click a button to change the background color randomly.</p>
+                        
+                        <div class="project-demo color-flipper-demo">
+                            <div class="color-box" id="colorBox" style="background-color: #3498db;">
+                                Current Color
+                            </div>
+                            <button class="btn-primary" onclick="flipColor()">Change Color</button>
+                            <p id="colorCode">#3498db</p>
+                        </div>
+                        
+                        <details>
+                            <summary>View Code</summary>
+                            <div class="code-block">
+                                <pre><code>function flipColor() {
+    const colors = ['#3498db', '#e74c3c', '#2ecc71', '#f39c12', '#9b59b6'];
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    
+    document.getElementById('colorBox').style.backgroundColor = randomColor;
+    document.getElementById('colorCode').textContent = randomColor;
+}</code></pre>
+                            </div>
+                        </details>
+                    </div>
+                    
+                    <div class="exercise-card">
+                        <h3>🎯 Challenge: Temperature Converter</h3>
+                        <p>Build a complete temperature converter that converts between Celsius and Fahrenheit.</p>
+                        
+                        <div class="code-editor">
+                            <textarea id="projectEditor" class="js-editor" rows="16">// Build your own temperature converter
+// Your code should:
+// 1. Convert Celsius to Fahrenheit
+// 2. Convert Fahrenheit to Celsius
+// 3. Display results
+
+function celsiusToFahrenheit(celsius) {
+    // Formula: (celsius × 9/5) + 32
+    return (celsius * 9/5) + 32;
+}
+
+function fahrenheitToCelsius(fahrenheit) {
+    // Formula: (fahrenheit - 32) × 5/9
+    return (fahrenheit - 32) * 5/9;
+}
+
+// Test your functions
+console.log("25°C =", celsiusToFahrenheit(25).toFixed(1) + "°F");
+console.log("77°F =", fahrenheitToCelsius(77).toFixed(1) + "°C");</textarea>
+                            
+                            <button class="btn-run" onclick="runJavaScript('projectEditor', 'projectOutput')">▶ Run Code</button>
+                        </div>
+                        
+                        <div class="editor-output" id="projectOutput"></div>
+                    </div>
+                </section>
+
+                <!-- Next/Prev Navigation -->
+                <div class="section-navigation">
+                    <button class="nav-prev" disabled>← Previous</button>
+                    <button class="nav-next" onclick="scrollToSection('intro')">Back to Top ↑</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>TechEdu Learning Hub</h3>
+                <p>Making web development accessible for college students since 2026</p>
+            </div>
+            <div class="footer-section">
+                <h3>JavaScript Resources</h3>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer">MDN JavaScript Guide</a></li>
+                    <li><a href="https://javascript.info/" target="_blank" rel="noopener noreferrer">JavaScript.info</a></li>
+                    <li><a href="https://www.w3schools.com/js/" target="_blank" rel="noopener noreferrer">W3Schools JavaScript</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <p>📧 info@techeduhub.com</p>
+                <p>Student Project for APT 1040</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 TechEdu Learning Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="TechEdu Learning Hub.js"></script>
+    <script src="Javascript Page.js"></script>
+</body>
+</html>

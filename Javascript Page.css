@@ -1,0 +1,485 @@
+/* javascript.css - Styles for JavaScript Tutorials page */
+
+/* JS Hero Section */
+.js-hero {
+    background: linear-gradient(135deg, #f7df1e, #f0b400);
+    color: #2c3e50;
+}
+
+.js-hero h1 span {
+    color: #2c3e50;
+    font-size: 3.5rem;
+}
+
+/* JS Intro Banner */
+.js-intro-banner {
+    background: #2c3e50;
+    color: white;
+    padding: 1rem 5%;
+    border-bottom: 4px solid #f7df1e;
+}
+
+.banner-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.banner-icon {
+    font-size: 4rem;
+    line-height: 1;
+}
+
+.banner-text h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+/* JS Content Styles */
+.js-content .concept-box {
+    border-left: 4px solid #f7df1e;
+}
+
+/* Data Types Grid */
+.data-types-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.data-type-card {
+    background: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.data-type-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--box-shadow);
+    border-color: #f7df1e;
+}
+
+.type-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.data-type-card h5 {
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.data-type-card code {
+    background: #e0e0e0;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+/* Operator Tables */
+.operator-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
+
+.operator-table th {
+    background: var(--secondary-color);
+    color: white;
+    padding: 0.8rem;
+    text-align: left;
+}
+
+.operator-table td {
+    padding: 0.8rem;
+    border: 1px solid #e0e0e0;
+}
+
+.operator-table tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.operator-table code {
+    background: #e0e0e0;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Interactive Demos */
+.interactive-demo {
+    background: #f8f9fa;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin: 2rem 0;
+    border: 2px solid #e0e0e0;
+}
+
+.demo-controls {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    flex-wrap: wrap;
+}
+
+.demo-controls input {
+    flex: 1;
+    min-width: 200px;
+    padding: 0.8rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.demo-controls input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.demo-result {
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+
+/* DOM Demo Area */
+#domDemo {
+    background: #2c3e50;
+    color: white;
+}
+
+.dom-demo-area {
+    background: #34495e;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-top: 1.5rem;
+}
+
+.demo-box {
+    background: #3498db;
+    color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-small {
+    background: white;
+    color: #2c3e50;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-small:hover {
+    background: #f7df1e;
+    transform: translateY(-2px);
+}
+
+.demo-container {
+    background: #2c3e50;
+    border: 2px dashed #f7df1e;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    min-height: 100px;
+}
+
+/* Event Demo Area */
+.event-demo-area {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.demo-row {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.btn-demo {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-demo:hover {
+    background: var(--secondary-color);
+}
+
+.event-output {
+    background: #f8f9fa;
+    padding: 0.8rem;
+    border-radius: 4px;
+    flex: 1;
+    min-width: 200px;
+}
+
+#eventDemoInput {
+    flex: 1;
+    padding: 0.8rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.hover-box {
+    background: #9b59b6;
+    color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    flex: 1;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.hover-box:hover {
+    background: #8e44ad;
+    transform: scale(1.02);
+}
+
+/* Project Cards */
+.project-card {
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: var(--transition);
+}
+
+.project-card:hover {
+    border-color: #f7df1e;
+    box-shadow: var(--box-shadow);
+}
+
+.project-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #f7df1e;
+    padding-bottom: 0.5rem;
+}
+
+.project-demo {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+/* Counter Demo */
+.counter-display {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.counter-controls {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn-counter {
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-counter:hover {
+    background: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+/* Todo Demo */
+.todo-demo {
+    text-align: left;
+}
+
+.todo-input-group {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.todo-input-group input {
+    flex: 1;
+    padding: 0.8rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 4px;
+}
+
+.todo-list {
+    list-style: none;
+}
+
+.todo-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem;
+    background: white;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+}
+
+.todo-list li button {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+/* Color Flipper Demo */
+.color-flipper-demo {
+    text-align: center;
+}
+
+.color-box {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 1.5rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    box-shadow: var(--box-shadow);
+}
+
+#colorCode {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1.2rem;
+    background: #f8f9fa;
+    padding: 0.5rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+}
+
+/* JS Editor */
+.js-editor {
+    background: #1e1e1e;
+    color: #f7df1e;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.95rem;
+    padding: 1rem;
+    border: 2px solid #f7df1e;
+    border-radius: 4px;
+    width: 100%;
+    resize: vertical;
+}
+
+.js-editor:focus {
+    outline: none;
+    border-color: #f0b400;
+}
+
+/* Console Note */
+.js-console-note {
+    background: #2c3e50;
+    color: white;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .banner-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .banner-icon {
+        font-size: 3rem;
+    }
+    
+    .demo-controls {
+        flex-direction: column;
+    }
+    
+    .demo-controls input {
+        width: 100%;
+    }
+    
+    .counter-controls {
+        flex-wrap: wrap;
+    }
+    
+    .event-demo-area .demo-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .color-box {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .data-types-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .counter-display {
+        font-size: 3rem;
+    }
+    
+    .btn-counter {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+    
+    .operator-table {
+        font-size: 0.85rem;
+    }
+    
+    .operator-table td {
+        padding: 0.5rem;
+    }
+}

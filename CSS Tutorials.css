@@ -1,0 +1,370 @@
+/* css-tutorials.css - Styles for CSS Tutorials page */
+
+/* CSS Hero Section */
+.css-hero {
+    background: linear-gradient(135deg, #264de4, #2965f1);
+    color: white;
+}
+
+.css-hero h1 span {
+    color: #ffd700;
+    font-size: 3.5rem;
+}
+
+/* CSS Intro Banner */
+.css-intro-banner {
+    background: linear-gradient(135deg, #f0db4f, #f7df1e);
+    color: #2c3e50;
+    padding: 1rem 5%;
+    border-bottom: 4px solid #264de4;
+}
+
+/* Selector Table */
+.selector-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.selector-table th {
+    background: var(--secondary-color);
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+.selector-table td {
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+}
+
+.selector-table tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.selector-table code {
+    background: #f4f4f4;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #e74c3c;
+}
+
+/* Color Grid */
+.color-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.color-card {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.color-swatch {
+    width: 100%;
+    height: 80px;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ddd;
+}
+
+/* Color Picker Demo */
+.color-picker-demo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+#colorPicker {
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.color-preview {
+    flex: 1;
+    padding: 1rem;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+/* Property Tables */
+.property-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.property-table th {
+    background: var(--secondary-color);
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+.property-table td {
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+}
+
+.property-table tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.property-table code {
+    background: #f4f4f4;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* Method Grid */
+.method-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.method-card {
+    background: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.method-card h4 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.3rem;
+}
+
+.method-demo {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background: white;
+    border-radius: 4px;
+}
+
+/* CSS Editor */
+.css-editor {
+    background: #1e1e1e;
+    color: #9cdcfe;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.95rem;
+    padding: 1rem;
+    border: 2px solid #264de4;
+    border-radius: 4px;
+    width: 100%;
+    resize: vertical;
+}
+
+.css-editor:focus {
+    outline: none;
+    border-color: #f7df1e;
+}
+
+/* CSS Preview */
+.css-preview {
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 1rem 0;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Selector Demo */
+.selector-demo {
+    margin: 2rem 0;
+}
+
+.demo-boxes {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Flexbox Demos */
+.justify-demos, .align-demos {
+    margin: 1.5rem 0;
+}
+
+.justify-row, .align-row {
+    margin: 1rem 0;
+}
+
+.justify-row code, .align-row code {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+/* Flex Challenge */
+.flex-center-demo {
+    margin: 2rem 0;
+}
+
+/* Grid Demos */
+.grid-examples {
+    margin: 2rem 0;
+}
+
+.grid-example {
+    margin: 1.5rem 0;
+}
+
+/* Responsive Quote */
+.responsive-quote {
+    background: #f8f9fa;
+    border-left: 4px solid #3498db;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+/* Device Mockups */
+.device-mockup {
+    transition: transform 0.3s;
+}
+
+.device-mockup:hover {
+    transform: scale(1.05);
+}
+
+/* Resources Section */
+.css-resources {
+    background: var(--light-bg);
+    padding: 4rem 5%;
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 2rem auto 0;
+}
+
+.resource-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    color: var(--dark-text);
+    transition: var(--transition);
+    border: 1px solid #e0e0e0;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow);
+    border-color: #3498db;
+}
+
+.resource-card h4 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.resource-card p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Final Challenge */
+.final-challenge {
+    background: linear-gradient(135deg, #264de4, #2965f1);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    margin: 3rem 0;
+}
+
+.final-challenge h3 {
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .color-picker-demo {
+        flex-direction: column;
+    }
+    
+    #colorPicker {
+        width: 100%;
+        height: 50px;
+    }
+    
+    .device-mockup {
+        width: 100% !important;
+    }
+    
+    .responsive-showcase {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .method-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .transform-demos {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .selector-table {
+        font-size: 0.85rem;
+    }
+    
+    .selector-table th,
+    .selector-table td {
+        padding: 8px 4px;
+    }
+    
+    .property-table {
+        font-size: 0.85rem;
+    }
+    
+    .gradient-demos {
+        grid-template-columns: 1fr;
+    }
+    
+    .filter-demos {
+        grid-template-columns: 1fr;
+    }
+    
+    .clip-demos {
+        grid-template-columns: 1fr;
+    }
+}

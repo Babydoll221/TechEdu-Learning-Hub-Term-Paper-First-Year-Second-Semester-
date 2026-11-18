@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact TechEdu Learning Hub. Get in touch with our team, send us a message, or chat with our AI assistant for instant help.">
+    <meta name="keywords" content="contact, support, help, chatbot, AI assistant, customer service">
+    <meta name="author" content="TechEdu Team">
+    <title>Contact Us | TechEdu Learning Hub</title>
+    <link rel="stylesheet" href="TechEdu Learning Hub.css">
+    <link rel="stylesheet" href="Contacts.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="TechEdu Learning Hub Logo.png" alt="TechEdu Logo - Stylized graduation cap and code brackets" width="60" height="60">
+            <h1>TechEdu <span>Learning Hub</span></h1>
+        </div>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="TechEdu Learning Hub.html">Home</a></li>
+                <li><a href="About Us.html">About</a></li>
+                <li><a href="HTML Page.html">HTML</a></li>
+                <li><a href="CSS Page.html">CSS</a></li>
+                <li><a href="Javascript.html">JavaScript</a></li>
+                <li><a href="examples.html">Examples</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page Hero Section -->
+        <section class="contact-hero">
+            <div class="hero-content">
+                <h1>Get in <span>Touch</span></h1>
+                <p>Have questions? We'd love to hear from you. Send us a message or chat with our AI assistant.</p>
+            </div>
+        </section>
+
+        <!-- Contact Info Cards -->
+        <section class="contact-info">
+            <div class="info-cards">
+                <div class="info-card">
+                    <div class="info-icon">📧</div>
+                    <h3>Email Us</h3>
+                    <p><a href="mailto:support@techeduhub.com">support@techeduhub.com</a></p>
+                    <p><a href="mailto:info@techeduhub.com">info@techeduhub.com</a></p>
+                    <p class="response-time">Response time: 24-48 hours</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">📞</div>
+                    <h3>Call Us</h3>
+                    <p>+1 (555) 123-4567</p>
+                    <p>+1 (555) 765-4321</p>
+                    <p class="response-time">Mon-Fri, 9am - 6pm EST</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">📍</div>
+                    <h3>Visit Us</h3>
+                    <p>123 Learning Avenue</p>
+                    <p>Tech City, TC 12345</p>
+                    <p class="response-time">Virtual meetings available</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">💬</div>
+                    <h3>Live Chat</h3>
+                    <p>Chat with our AI assistant</p>
+                    <p>Available 24/7</p>
+                    <button class="chat-trigger-btn" onclick="openChatbot()">
+                        <i class="fas fa-comment-dots"></i> Start Chat
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Contact Form Section -->
+        <section class="contact-form-section">
+            <div class="form-container">
+                <div class="form-header">
+                    <h2>Send Us a Message</h2>
+                    <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+                </div>
+
+                <form id="contactForm" class="contact-form" onsubmit="return handleFormSubmit(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" placeholder="John" required>
+                            <div class="error-message" id="firstNameError"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" placeholder="Doe" required>
+                            <div class="error-message" id="lastNameError"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
+                            <div class="error-message" id="emailError"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+                            <div class="error-message" id="phoneError"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="support">Technical Support</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="partnership">Partnership</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <div class="error-message" id="subjectError"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="6" placeholder="How can we help you?" required></textarea>
+                        <div class="error-message" id="messageError"></div>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <span class="checkbox-text">Subscribe to our newsletter for updates and tips</span>
+                        </label>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="privacy" name="privacy" required>
+                            <span class="checkbox-text">I agree to the <a href="#" class="privacy-link">Privacy Policy</a> and <a href="#" class="privacy-link">Terms of Service</a> *</span>
+                        </label>
+                        <div class="error-message" id="privacyError"></div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-submit" id="submitBtn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-loader" style="display: none;">⏳</span>
+                        </button>
+                        <button type="reset" class="btn-reset">Clear Form</button>
+                    </div>
+
+                    <div class="form-status" id="formStatus" style="display: none;"></div>
+                </form>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>How long does it take to get a response?</h3>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We typically respond within 24-48 hours during business days. For urgent matters, try our live chat or call us during business hours.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Do you offer one-on-one tutoring?</h3>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We offer personalized tutoring sessions. Contact us with your requirements, and we'll match you with an instructor.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Can I get help with my project?</h3>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! Our team can provide guidance on your web development projects. Please provide details about your project when contacting us.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>What are your business hours?</h3>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Monday - Friday: 9:00 AM to 6:00 PM EST<br>Saturday: 10:00 AM to 2:00 PM EST<br>Sunday: Closed</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="map-section">
+            <h2 class="section-title">Find Us</h2>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.00369368400567!3d40.71312937933185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a316bb7bc2b%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" 
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </section>
+
+        <!-- Social Media Section -->
+        <section class="social-section">
+            <h2 class="section-title">Connect With Us</h2>
+            <div class="social-links">
+                <a href="https://www.facebook.com/" class="social-link" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                    <span>Facebook</span>
+                </a>
+                <a href="https://www.twitter.com/" class="social-link" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                    <span>Twitter</span>
+                </a>
+                <a href="https://www.linkedin.com/" class="social-link" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/" class="social-link" target="_blank">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://www.youtube.com/" class="social-link" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                    <span>YouTube</span>
+                </a>
+                <a href="https://www.instagram.com/" class="social-link" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- AI CHATBOT -->
+    <div class="chatbot-container" id="chatbotContainer">
+        <!-- Chatbot Toggle Button -->
+        <button class="chatbot-toggle" id="chatbotToggle" onclick="toggleChatbot()">
+            <i class="fas fa-comment"></i>
+            <span class="toggle-text">Chat with AI</span>
+        </button>
+
+        <!-- Chatbot Window -->
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <div class="chatbot-header-info">
+                    <i class="fas fa-robot"></i>
+                    <div>
+                        <h3>TechEdu AI Assistant</h3>
+                        <p class="chatbot-status">🟢 Online</p>
+                    </div>
+                </div>
+                <div class="chatbot-header-actions">
+                    <button class="chatbot-minimize" onclick="minimizeChatbot()" title="Minimize">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <button class="chatbot-close" onclick="closeChatbot()" title="Close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="message bot-message">
+                    <div class="message-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="message-content">
+                        <p>Hi there! 👋 I'm the TechEdu AI assistant. How can I help you today?</p>
+                        <p class="message-time">Just now</p>
+                    </div>
+                </div>
+                
+                <!-- Suggested questions will be added here dynamically -->
+            </div>
+
+            <div class="chatbot-input-area">
+                <div class="suggested-questions" id="suggestedQuestions">
+                    <button class="suggested-q" onclick="sendSuggestedMessage('What courses do you offer?')">📚 What courses do you offer?</button>
+                    <button class="suggested-q" onclick="sendSuggestedMessage('How can I contact support?')">📞 Contact support</button>
+                    <button class="suggested-q" onclick="sendSuggestedMessage('Do you have any tutorials?')">💻 Tutorials?</button>
+                </div>
+                
+                <div class="input-wrapper">
+                    <input type="text" 
+                           id="chatbotInput" 
+                           placeholder="Type your message..." 
+                           onkeypress="handleKeyPress(event)"
+                           autocomplete="off">
+                    <button class="send-button" onclick="sendMessage()">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+                <div class="typing-indicator" id="typingIndicator" style="display: none;">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>TechEdu Learning Hub</h3>
+                <p>Making web development accessible for college students since 2026</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="About Us.html">About Us</a></li>
+                    <li><a href="SiteMap.html">Site Map</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com/" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+                <p class="footer-note">Student Project for APT 1040</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 TechEdu Learning Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="TechEdu Learning Hub.js"></script>
+    <script src="AI chatbot.js"></script>
+</body>
+</html>

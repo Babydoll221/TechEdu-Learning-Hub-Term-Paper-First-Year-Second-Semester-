@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TechEdu Learning Hub - Interactive web development tutorials for college students">
+    <meta name="keywords" content="HTML, CSS, JavaScript, web design, tutorials">
+    <meta name="author" content="Student Name">
+    <title>TechEdu Learning Hub | Web Development Tutorials</title>
+    <link rel="stylesheet" href="TechEdu Learning Hub.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Source+Code+Pro&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="TechEdu Learning Hub Logo.png" alt="TechEdu Logo" width="60" height="60">
+            <h1>TechEdu <span>Learning Hub</span></h1>
+        </div>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="About Us.html">About Us</a></li>
+                <li><a href="HTML Page.html">HTML</a></li>
+                <li><a href="CSS Page.html">CSS</a></li>
+                <li><a href="Javascript.html">JavaScript</a></li>
+                <li><a href="examples.html">Examples</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Master Web Development</h2>
+                <p>Interactive tutorials, live code examples, and comprehensive guides for college students</p>
+                <a href="HTML Page.html" class="btn btn-primary">Start Learning →</a>
+            </div>
+        </section>
+
+        <section class="features">
+            <h2 class="section-title">Why Choose TechEdu?</h2>
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <div class="icon">📚</div>
+                    <h3>Comprehensive Tutorials</h3>
+                    <p>From HTML basics to advanced CSS3 and JavaScript, we cover everything you need for your web design course.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="icon">💻</div>
+                    <h3>Live Code Examples</h3>
+                    <p>See concepts in action with interactive examples you can modify and test directly in your browser.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="icon">📱</div>
+                    <h3>Mobile-Friendly</h3>
+                    <p>All tutorials work perfectly on your laptop, tablet, or phone - learn anywhere, anytime.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="showcase">
+            <h2 class="section-title">HTML Tables in Action</h2>
+            <p>Here's a practical example of an HTML table - a student schedule table:</p>
+            
+            <div class="code-display">
+                <h3>Example: Course Schedule</h3>
+                <table class="demo-table">
+                    <caption>Weekly Course Schedule - Fall 2025</caption>
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>9:00 - 10:30</th>
+                            <th>10:45 - 12:15</th>
+                            <th>1:30 - 3:00</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Monday</td>
+                            <td>Web Design (Room 101)</td>
+                            <td>JavaScript (Room 102)</td>
+                            <td>Lab Session</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>Web Design (Room 101)</td>
+                            <td>JavaScript (Room 102)</td>
+                            <td>Project Work</td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td colspan="2">Workshop (Room 201)</td>
+                            <td>Review Session</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="table-note"><small>Note: Uses <code>colspan="2"</code> to merge Friday morning sessions</small></p>
+            </div>
+            
+            <div class="cta-center">
+                <a href="examples.html" class="btn btn-secondary">View More Examples →</a>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <h2>Stay Updated</h2>
+            <p>Get the latest tutorials and web design tips delivered to your inbox</p>
+            <form class="newsletter-form" id="newsletterForm">
+                <div class="form-group">
+                    <label for="email">Email address:</label>
+                    <input type="email" id="email" name="email" placeholder="student@example.com" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+            <div id="formMessage" class="form-message" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>TechEdu Learning Hub</h3>
+                <p>Making web development accessible for college students since 2026</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="About Us.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="SiteMap.html">Site Map</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <p>Email: info@techeduhub.com</p>
+                <p>Twitter: @TechEduHub</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 TechEdu Learning Hub. All rights reserved. Student Project for Web Design Course.</p>
+        </div>
+    </footer>
+
+    <script src="TechEdu Learning Hub.js"></script>
+</body>
+</html>
